@@ -69,3 +69,12 @@
 .nav-underline:hover::after {
   width: 65%;
 }
+
+@media screen and (max-width: 991px){
+  #nav-link a{
+    text-align: left;
+  }
+  .nav-underline:hover::after {
+    width: 0;
+  }
+}

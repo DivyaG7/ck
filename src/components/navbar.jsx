@@ -13,8 +13,8 @@ export const CustomNavbar = () => {
         <img src={logo} alt="Logo" className="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav>
+      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+        <Nav id='nav-link'>
           <Nav.Link
             as={Link}
             to="/"
