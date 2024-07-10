@@ -37,16 +37,16 @@ export const Home = () => {
         <div>
             <div className='container mt-5'>
                 <div className='row pt-5'>
-                    <div className='col-md-6 d-flex justify-content-center' style={{ textAlign: 'left', flexDirection: 'column' }}>
+                    <div className='col-md-6 d-flex justify-content-center mb-4 gap-3' style={{ textAlign: 'left', flexDirection: 'column' }}>
                         <p style={{ textAlign: 'left', color: '#f85c1d' }}>FUNDING SOLUTIONS</p>
                         <h1 style={{ fontSize: '50px' }}>
                             Achieve your goals,<br />
                             access <ChangingWords /><br /> financing
                         </h1>
 
-                        <p className='mt-4' style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
+                        <p style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
 
-                        <button className='mt-4' id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                        <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                     </div>
                     <div className='col-md-6 d-flex justify-content-center align-items-center'>
                         <img src={home1} alt='home_page_image' className='img-fluid' />
@@ -82,15 +82,15 @@ export const Home = () => {
             <section>
                 <div className='container mt-5'>
                     <div className='row pt-5'>
-                        <div id='section-2' className='col-md-6 d-flex justify-content-center mb-4' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '4rem' }}>
+                        <div id='section-2' className='col-md-6 d-flex justify-content-center mb-4 gap-3' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '4rem' }}>
                             <p style={{ textAlign: 'left', color: '#f85c1d' }}>PREPARATION</p>
                             <h1 style={{ fontSize: '50px' }}>Ready to apply?<br></br>Here's what you need</h1>
 
-                            <p className='mt-4' style={{ fontSize: '20px' }}>Business Type: LLC, Corporation</p>
+                            <p style={{ fontSize: '20px' }}>Business Type: LLC, Corporation</p>
                             <p style={{ fontSize: '20px' }}>Strong credit score</p>
                             <p style={{ fontSize: '20px' }}>Identification documents</p>
 
-                            <button className='mt-4' id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                         </div>
                         <div className='col-md-6 d-flex justify-content-center align-items-canter'>
                             <img src={home1} alt='home_page_image' className='img-fluid' />
@@ -107,15 +107,15 @@ export const Home = () => {
                             <img src={home1} alt='home_page_image' className='img-fluid' />
                         </div>
 
-                        <div id='section-3' className='col-md-6 d-flex justify-content-center' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '8rem' }}>
+                        <div id='section-3' className='col-md-6 d-flex justify-content-center gap-2' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '8rem' }}>
                             <p style={{ textAlign: 'left', color: '#f85c1d' }}>GUIDANCE</p>
                             <h1 style={{ fontSize: '50px' }}>Advice tailored for <br></br> your success</h1>
 
-                            <p className='mt-4' style={{ fontSize: '20px' }}>Business growth strategies</p>
+                            <p style={{ fontSize: '20px' }}>Business growth strategies</p>
                             <p style={{ fontSize: '20px' }}>Hassle-free online application</p>
                             <p style={{ fontSize: '20px' }}>Legal consultation</p>
 
-                            <button className='mt-4' id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                         </div>
                     </div>
                 </div>
