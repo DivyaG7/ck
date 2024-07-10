@@ -15,38 +15,38 @@ export const CustomNavbar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
-          <Nav.Link 
-            as={Link} 
-            to="/" 
-            className={`nav-link-custom nav-underline ${location.pathname === '/' ? 'active' : ''}`} 
+          <Nav.Link
+            as={Link}
+            to="/"
+            className={`nav-link-custom nav-underline ${location.pathname === '/' ? 'active' : ''}`}
           >
             Home
           </Nav.Link>
-          <Nav.Link 
-            as={Link} 
-            to="/about" 
-            className={`nav-link-custom nav-underline ${location.pathname === '/about' ? 'active' : ''}`} 
+          <Nav.Link
+            as={Link}
+            to="/about"
+            className={`nav-link-custom nav-underline ${location.pathname === '/about' ? 'active' : ''}`}
           >
             About
           </Nav.Link>
-          <Nav.Link 
-            as={Link} 
-            to="/service" 
-            className={`nav-link-custom nav-underline ${location.pathname === '/service' ? 'active' : ''}`} 
+          <Nav.Link
+            as={Link}
+            to="/service"
+            className={`nav-link-custom nav-underline ${location.pathname === '/service' ? 'active' : ''}`}
           >
             Services
           </Nav.Link>
-          <Nav.Link 
-            as={Link} 
-            to="/news" 
-            className={`nav-link-custom nav-underline ${location.pathname === '/news' ? 'active' : ''}`} 
+          <Nav.Link
+            as={Link}
+            to="/news"
+            className={`nav-link-custom nav-underline ${location.pathname === '/news' ? 'active' : ''}`}
           >
             News
           </Nav.Link>
-          <Nav.Link 
-            as={Link} 
-            to="/contact" 
-            className={`nav-link-custom nav-underline ${location.pathname === '/contact' ? 'active' : ''}`} 
+          <Nav.Link
+            as={Link}
+            to="/contact"
+            className={`nav-link-custom nav-underline ${location.pathname === '/contact' ? 'active' : ''}`}
           >
             Contact
           </Nav.Link>

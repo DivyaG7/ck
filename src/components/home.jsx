@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import home1 from '../assets/home_page_image1.jpg'
 import testimonial1 from '../assets/testimonial1.jpg'
 import testimonial2 from '../assets/testimonial2.jpg'
@@ -7,6 +7,9 @@ import testimonial4 from '../assets/testimonial4.jpg'
 import blog1 from '../assets/blog-img1.jpg'
 import blog2 from '../assets/blog-img2.jpg'
 import blog3 from '../assets/blog-img3.jpg'
+import icon1 from '../assets/icon-8.svg'
+import icon2 from '../assets/icon-4.svg'
+import icon3 from '../assets/icon-9.svg'
 import '../components/home.css'
 
 
@@ -37,9 +40,9 @@ export const Home = () => {
                     <div className='col-md-6 d-flex justify-content-center' style={{ textAlign: 'left', flexDirection: 'column' }}>
                         <p style={{ textAlign: 'left', color: '#f85c1d' }}>FUNDING SOLUTIONS</p>
                         <h1 style={{ fontSize: '50px' }}>
-                Achieve your goals,<br />
-                access <ChangingWords /><br /> financing
-            </h1>
+                            Achieve your goals,<br />
+                            access <ChangingWords /><br /> financing
+                        </h1>
 
                         <p className='mt-4' style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
 
@@ -132,21 +135,37 @@ export const Home = () => {
 
                     <div className='row mt-5'>
                         <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <h5>Speed</h5>
-                                <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                <div className='col-lg-3 col-md-12 col-12'>
+                                    <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                </div>
+                                <div className='col-lg-8 col-md-12 col-12'>
+                                    <h5>Speed</h5>
+                                    <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                                </div>
                             </div>
+
                         </div>
                         <div className='col-md-4 col-12 p-2'>
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <h5>Flexibility</h5>
-                                <p>Tailored solutions adapting seamlessly to your evolving business.</p>
+                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                <div className='col-lg-3 col-md-12 col-12'>
+                                    <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                </div>
+                                <div className='col-lg-8 col-md-12 col-12'>
+                                    <h5>Flexibility</h5>
+                                    <p>Tailored solutions adapting seamlessly to your evolving business.</p>
+                                </div>
                             </div>
                         </div>
                         <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <h5>Confidence</h5>
-                                <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                <div className='col-lg-3 col-md-12 col-12'>
+                                    <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                </div>
+                                <div className='col-lg-8 col-md-12 col-12'>
+                                    <h5>Confidence</h5>
+                                    <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -316,13 +335,13 @@ export const Home = () => {
                         </div>
                     </div>
 
-                    <div className='row mt-2'>
+                    <div className='row mt-2' id='blog'>
                         <div className='col-md-4 col-12 p-2' >
                             <div className='m-2 p-4 d-flex justify-content-center align-items-left gap-3' style={{ textAlign: 'left', background: '#f6f6f4', flexDirection: 'column' }}>
                                 <img src={blog1} alt='testimonials' className='img-fluid w-100' />
                                 <h5 className='mt-2'>The rise of digital wallets: a fintech game-changer</h5>
                                 <p>When evaluating potential agencies, consider their expertise in various aspects of branding and design.</p>
-                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none'}}>Read more</button>
+                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more</button>
                             </div>
                         </div>
                         <div className='col-md-4 col-12 p-2'>
