@@ -135,7 +135,7 @@ export const About = () => {
               <p style={{ textAlign: 'left', color: '#f85c1d' }}>WHY CHOOSE US</p>
               <h1 style={{ fontSize: '50px' }}>Reasons to choose our lending specialists</h1>
             </div>
-            <div className='col-md-6 pt-5 pe-5 mt-5'>
+            <div className='col-md-6 pt-5 ps-5 mt-5'>
               <p style={{ textAlign: 'left', fontSize: '18px' }}>We care about your business and we're here if you need help finding a solution to match your business needs. Fast access to flexible funding solutions to support cash flow and business growth.</p>
             </div>
           </div>

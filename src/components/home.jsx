@@ -128,7 +128,7 @@ export const Home = () => {
                             <p style={{ textAlign: 'left', color: '#f85c1d' }}>WHY CHOOSE US</p>
                             <h1 style={{ fontSize: '50px' }}>Reasons to choose our lending specialists</h1>
                         </div>
-                        <div className='col-md-6 pt-5 pe-5 mt-5'>
+                        <div className='col-md-6 pt-5 ps-5 mt-5'>
                             <p style={{ textAlign: 'left', fontSize: '18px' }}>We care about your business and we're here if you need help finding a solution to match your business needs. Fast access to flexible funding solutions to support cash flow and business growth.</p>
                         </div>
                     </div>
@@ -219,7 +219,7 @@ export const Home = () => {
                             <h1 style={{ fontSize: '50px' }}>Easy 3-step funding solution</h1>
                         </div>
                         <div className='col-md-4 pt-5'>
-                            <p style={{ textAlign: 'left', fontSize: '18px' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
+                            <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
                         </div>
                         <div className='col-md-3 pt-5'>
                             <button id='button' className='mt-4' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Get Started</button>
@@ -328,7 +328,7 @@ export const Home = () => {
                             <h1 style={{ fontSize: '50px' }}>Resources and stories center</h1>
                         </div>
                         <div className='col-md-4 pt-5'>
-                            <p style={{ textAlign: 'left', fontSize: '18px' }}>Explore insightful content that keeps you ahead of the curve and connected to the pulse of what's happening.</p>
+                            <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Explore insightful content that keeps you ahead of the curve and connected to the pulse of what's happening.</p>
                         </div>
                         <div className='col-md-3 pt-5'>
                             <button className='mt-4' id='button' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Read all articles</button>
