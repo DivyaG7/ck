@@ -176,15 +176,15 @@ export const Home = () => {
             <section>
                 <div className='mt-5 pt-5 pb-5'>
                     <div id='container-loan' style={{ background: '#174035', padding: '4rem 8rem' }}>
-                        <div className='row pt-2 pb-5'>
+                        <div className='row pt-2 pb-5 justify-content-center align-items-center'>
                             <div className='col-md-5 d-flex justify-content-center pt-5' style={{ textAlign: 'left', flexDirection: 'column', color: 'white' }}>
                                 <p style={{ textAlign: 'left' }}>SIMPLIFIED PROCESS</p>
                                 <h1 style={{ fontSize: '50px' }}>Easy 3-step funding solution</h1>
                             </div>
-                            <div className='col-md-4 pt-5 mt-5'>
+                            <div className='col-md-4 pt-5'>
                                 <p style={{ textAlign: 'left', fontSize: '18px', color: 'white' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
                             </div>
-                            <div className='col-md-3 pt-5 mt-5'>
+                            <div className='col-md-3 pt-5'>
                                 <button className='mt-4' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Get Started</button>
                             </div>
                         </div>
@@ -213,15 +213,15 @@ export const Home = () => {
 
             <section>
                 <div className='container' style={{ background: '#f6f6f4', marginTop: '80px', paddingBottom: '80px' }}>
-                    <div className='row pt-2 pb-5'>
+                    <div className='row pt-2 pb-5 justify-content-center align-items-center'>
                         <div className='col-md-5 d-flex justify-content-center pt-5' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '30px' }}>
                             <p style={{ textAlign: 'left', color: '#f85c1d' }}>SIMPLIFIED PROCESS</p>
                             <h1 style={{ fontSize: '50px' }}>Easy 3-step funding solution</h1>
                         </div>
-                        <div className='col-md-4 pt-5 mt-5'>
+                        <div className='col-md-4 pt-5'>
                             <p style={{ textAlign: 'left', fontSize: '18px' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
                         </div>
-                        <div className='col-md-3 pt-5 mt-5'>
+                        <div className='col-md-3 pt-5'>
                             <button id='button' className='mt-4' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Get Started</button>
                         </div>
                     </div>
@@ -322,15 +322,15 @@ export const Home = () => {
 
             <section>
                 <div className='container' style={{ background: 'white', marginTop: '80px', paddingBottom: '80px' }}>
-                    <div className='row pt-2 pb-5'>
+                    <div className='row pt-2 pb-5 justify-content-center align-items-center'>
                         <div className='col-md-5 d-flex justify-content-center pt-5' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '30px' }}>
                             <p style={{ textAlign: 'left', color: '#f85c1d' }}>OUR BLOG</p>
                             <h1 style={{ fontSize: '50px' }}>Resources and stories center</h1>
                         </div>
-                        <div className='col-md-4 pt-5 mt-5'>
+                        <div className='col-md-4 pt-5'>
                             <p style={{ textAlign: 'left', fontSize: '18px' }}>Explore insightful content that keeps you ahead of the curve and connected to the pulse of what's happening.</p>
                         </div>
-                        <div className='col-md-3 pt-5 mt-5'>
+                        <div className='col-md-3 pt-5'>
                             <button className='mt-4' id='button' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Read all articles</button>
                         </div>
                     </div>
