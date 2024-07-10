@@ -181,10 +181,10 @@ export const Home = () => {
                                 <p style={{ textAlign: 'left' }}>SIMPLIFIED PROCESS</p>
                                 <h1 style={{ fontSize: '50px' }}>Easy 3-step funding solution</h1>
                             </div>
-                            <div className='col-md-4 pt-5 mt-5'>
+                            <div className='col-md-4 pt-5'>
                                 <p style={{ textAlign: 'left', fontSize: '18px', color: 'white' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
                             </div>
-                            <div className='col-md-3 pt-5 mt-5'>
+                            <div className='col-md-3 pt-5'>
                                 <button className='mt-4' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Get Started</button>
                             </div>
                         </div>
