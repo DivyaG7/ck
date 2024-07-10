@@ -1,23 +1,24 @@
 /* home.css */
 @keyframes slideDown {
-    0% {
+  0% {
       opacity: 0;
       transform: translateY(-100%);
-    }
-    50% {
+  }
+  50% {
       opacity: 1;
       transform: translateY(0);
-    }
-    100% {
+  }
+  100% {
       opacity: 0;
       transform: translateY(10%);
-    }
   }
-  
-  .animated-word {
-    display: inline-block;
-    animation: slideDown 1.5s infinite;
-  }
+}
+
+.animated-word {
+  display: inline-block;
+  animation: slideDown 1.5s infinite;
+}
+
   
   .button-underline {
     position: relative;

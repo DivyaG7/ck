@@ -8,6 +8,7 @@ import { Service } from './components/service';
 import { Contact } from './components/contact';
 import { Home } from './components/home';
 import { Footer } from './components/footer';
+import { News } from './components/news';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/About' element={<About />} />
           <Route path='/Service' element={<Service />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/news' element={<News />} />
         </Routes>
         <Footer />
       </Router>

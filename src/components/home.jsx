@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import home1 from '../assets/home_page_image1.jpg'
 import testimonial1 from '../assets/testimonial1.jpg'
 import testimonial2 from '../assets/testimonial2.jpg'
@@ -17,7 +17,7 @@ const ChangingWords = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentWordIndex(prevIndex => (prevIndex + 1) % words.length);
-        }, 2000); // Change word every 2 seconds
+        }, 1500); // Change word every 3 seconds
 
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, [words.length]);
@@ -27,6 +27,8 @@ const ChangingWords = () => {
     );
 };
 
+
+
 export const Home = () => {
     return (
         <div>
@@ -34,8 +36,10 @@ export const Home = () => {
                 <div className='row pt-5'>
                     <div className='col-md-6 d-flex justify-content-center' style={{ textAlign: 'left', flexDirection: 'column' }}>
                         <p style={{ textAlign: 'left', color: '#f85c1d' }}>FUNDING SOLUTIONS</p>
-                        <h1 style={{ fontSize: '50px' }}>Achieve your goals,<br></br>
-                            access <ChangingWords /><br></br> financing</h1>
+                        <h1 style={{ fontSize: '50px' }}>
+                Achieve your goals,<br />
+                access <ChangingWords /><br /> financing
+            </h1>
 
                         <p className='mt-4' style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
 

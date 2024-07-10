@@ -38,6 +38,13 @@ export const CustomNavbar = () => {
           </Nav.Link>
           <Nav.Link 
             as={Link} 
+            to="/news" 
+            className={`nav-link-custom nav-underline ${location.pathname === '/news' ? 'active' : ''}`} 
+          >
+            News
+          </Nav.Link>
+          <Nav.Link 
+            as={Link} 
             to="/contact" 
             className={`nav-link-custom nav-underline ${location.pathname === '/contact' ? 'active' : ''}`} 
           >
