@@ -1,0 +1,71 @@
+.navbar-custom {
+    background-color: #fff;
+    padding: 1rem;
+  }
+  
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .nav-link {
+    color: #000 !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 18px !important;
+    font-weight: 420 !important;
+  }
+  
+  .nav-link:hover {
+    color: #007bff !important;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+
+  .navbar-custom .nav-link {
+    margin-right: 20px; /* Adjust the value to set the desired gap */
+    color: white; /* Optional: Set the color of the links */
+  }
+  
+  .navbar-custom .nav-link:last-child {
+    margin-right: 0; /* Remove the margin from the last link */
+  }
+  
+/* navbar.css */
+.navbar-custom .nav-link-custom {
+  color: #000; /* Default link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-custom .nav-link-custom.active {
+  color: #f85c1d !important; /* Active link color */
+}
+
+.nav-underline {
+  position: relative;
+  display: inline-block;
+  border: none;
+  color: #f85c1d;
+  font-weight: 500;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #f85c1d;
+  bottom: 5px;
+  left: 15px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-underline:hover::after {
+  width: 65%;
+}

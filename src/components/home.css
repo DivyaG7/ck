@@ -1,0 +1,97 @@
+/* home.css */
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+  }
+  
+  .animated-word {
+    display: inline-block;
+    animation: slideDown 1.5s infinite;
+  }
+  
+  .button-underline {
+    position: relative;
+    display: inline-block;
+    background: #274d43;
+    border: none;
+    color: #f85c1d;
+    font-weight: 500;
+    padding: 10px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .button-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #f85c1d;
+    bottom: 5px;
+    left: 20px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .button-underline:hover::after {
+    width: 65%;
+  }
+  
+  .button-underline:hover {
+    color: #f85c1d;
+  }
+  
+  #button:hover{
+    background-color: #174035 !important;
+    color: white !important;
+  }
+
+  
+@media screen and (max-width: 767px){
+    #container-loan{
+        padding: 2rem 3rem !important;
+    }
+
+    #loan{
+        padding: 2rem 2rem !important;
+    }
+
+    #personal-loan{
+        padding: 0 !important;
+    }
+
+    #startup-loan{
+        padding: 0 !important;
+    }
+
+    #business-loan{
+        padding: 0 !important;
+    }
+
+    #section-2{
+        padding-left: 10px !important;
+    }
+
+    #section-2 h1{
+        font-size: 40px !important;
+    }
+
+    #section-3{
+        padding-left: 10px !important;
+    }
+
+    #section-3 h1{
+        font-size: 40px !important;
+    }
+}
+ 
