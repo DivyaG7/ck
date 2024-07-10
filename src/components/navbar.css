@@ -4,8 +4,8 @@
   }
   
   .logo {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 100px;
   }
   
   .nav-link {
@@ -25,7 +25,7 @@
   
 
   .navbar-custom .nav-link {
-    margin-right: 20px; /* Adjust the value to set the desired gap */
+    margin-right: 12px; /* Adjust the value to set the desired gap */
     color: white; /* Optional: Set the color of the links */
   }
   
@@ -70,6 +70,14 @@
   width: 65%;
 }
 
+#nav-button button:hover{
+  background: #174035 !important;
+}
+
+#nav-button .hiring-btn:hover{
+  color: white !important;
+}
+
 @media screen and (max-width: 991px){
   #nav-link a{
     text-align: left;
@@ -77,4 +85,8 @@
   .nav-underline:hover::after {
     width: 0;
   }
+  #nav-button{
+    display: none !important;
+  }
+  
 }
