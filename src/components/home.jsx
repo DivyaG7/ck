@@ -12,6 +12,8 @@ import icon2 from '../assets/icon-4.svg'
 import icon3 from '../assets/icon-9.svg'
 import '../components/home.css'
 import VisibilitySensor from 'react-visibility-sensor';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const ChangingWords = () => {
@@ -57,7 +59,7 @@ export const Home = () => {
 
                         <p style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
 
-                        <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                        <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                     </div>
 
                     <div className='col-md-6 d-flex justify-content-center align-items-center'>
@@ -107,7 +109,7 @@ export const Home = () => {
                             <p style={{ fontSize: '20px' }}>Strong credit score</p>
                             <p style={{ fontSize: '20px' }}>Identification documents</p>
 
-                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                         <div className='col-md-6 d-flex justify-content-center align-items-canter'>
                             <VisibilitySensor onChange={handleChange} partialVisibility={100}>
@@ -140,7 +142,7 @@ export const Home = () => {
                             <p style={{ fontSize: '20px' }}>Hassle-free online application</p>
                             <p style={{ fontSize: '20px' }}>Legal consultation</p>
 
-                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                     </div>
                 </div>
@@ -216,24 +218,24 @@ export const Home = () => {
                                 <p style={{ textAlign: 'left', fontSize: '18px', color: 'white' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
                             </div>
                             <div className='col-md-3 pt-5'>
-                                <button className='mt-4' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Get Started</button>
+                                <button className='mt-4' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                             </div>
                         </div>
 
                         <div id='loan' className='row' style={{ background: '#274d43', padding: '2rem 2rem' }}>
                             <div id='personal-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>01</h5>
-                                <h3 className='mt-3'>Online application</h3>
+                                <h3 className='mt-3'>Online application<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
                                 <p className='mt-3'>Get up and running in no time by creating a free account. Register only with your email address.</p>
                             </div>
                             <div id='startup-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>02</h5>
-                                <h3 className='mt-3'>Same-day decision</h3>
+                                <h3 className='mt-3'>Same-day decision<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
                                 <p className='mt-3'>Go through the summaries for each of your options, taking note of which ones check.</p>
                             </div>
                             <div id='business-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>03</h5>
-                                <h3 className='mt-3'>Sign your contract</h3>
+                                <h3 className='mt-3'>Sign your contract<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
                                 <p className='mt-3'>Effortlessly finalize your agreement online, ensuring a smooth and prompt funding process for you.</p>
                             </div>
                         </div>
@@ -253,7 +255,7 @@ export const Home = () => {
                             <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Discover how businesses like yours transformed with our software. Real stories of growth, innovation, and success.</p>
                         </div>
                         <div className='col-md-3 pt-5'>
-                            <button id='button' className='mt-4' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>View all stories</button>
+                            <button id='button' className='mt-4' style={{ width: '170px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>View all stories<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                     </div>
 
@@ -374,7 +376,7 @@ export const Home = () => {
                             <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Explore insightful content that keeps you ahead of the curve and connected to the pulse of what's happening.</p>
                         </div>
                         <div className='col-md-3 pt-5'>
-                            <button className='mt-4' id='button' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Read all articles</button>
+                            <button className='mt-4' id='button' style={{ width: '170px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Read all articles<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                     </div>
 
@@ -384,7 +386,7 @@ export const Home = () => {
                                 <img src={blog1} alt='testimonials' className='img-fluid w-100' />
                                 <h5 className='mt-2'>The rise of digital wallets: a fintech game-changer</h5>
                                 <p>When evaluating potential agencies, consider their expertise in various aspects of branding and design.</p>
-                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more</button>
+                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                             </div>
                         </div>
                         <div className='col-md-4 col-12 p-2'>
@@ -392,7 +394,7 @@ export const Home = () => {
                                 <img src={blog2} alt='testimonials' className='img-fluid w-100' />
                                 <h5 className='mt-2'>Saving smarter: practical tips for financial stability</h5>
                                 <p>The concept of a multi-brand system has gained traction, allowing businesses to manage various brands.</p>
-                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more</button>
+                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                             </div>
                         </div>
                         <div className='col-md-4 col-12 p-2' >
@@ -400,7 +402,7 @@ export const Home = () => {
                                 <img src={blog3} alt='testimonials' className='img-fluid w-100' />
                                 <h5 className='mt-2'>Building a balanced portfolio: a guide for novices</h5>
                                 <p>A well-defined statement helps participants focus their creativity and ensures everyone is on the same page.</p>
-                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more</button>
+                                <button id='button' style={{ width: '150px', padding: '.5rem', background: 'white', color: 'black', border: 'none' }}>Read more<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                             </div>
                         </div>
                     </div>

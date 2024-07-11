@@ -9,6 +9,8 @@ import icon1 from '../assets/icon-8.svg'
 import icon2 from '../assets/icon-4.svg'
 import icon3 from '../assets/icon-9.svg'
 import VisibilitySensor from 'react-visibility-sensor';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const About = () => {
 
@@ -221,7 +223,7 @@ export const About = () => {
 
               <p style={{ fontSize: '20px' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
 
-              <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+              <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
             </div>
           </div>
         </div>
