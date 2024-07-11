@@ -190,19 +190,8 @@ export const Contact = () => {
 
 
       <section>
-        <div className="map-container mt-5">
-          {/* Google Maps Embed iframe */}
-          <iframe
-            title="Company Location"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248839.0447873106!2d80.01263977812498!3d12.964807662433914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720601926483!5m2!1sen!2sin"
-            width="100%"
-            height="500"
-            frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-          ></iframe>
+        <div className="map-container mt-3">
+
 
           {/* Address overlay only on larger screens */}
           <div className="address-overlay d-none d-md-block">
@@ -251,6 +240,20 @@ export const Contact = () => {
               </div>
             </div>
           </div>
+
+          {/* Google Maps Embed iframe */}
+          <iframe
+            title="Company Location"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248839.0447873106!2d80.01263977812498!3d12.964807662433914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720601926483!5m2!1sen!2sin"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+          ></iframe>
+
         </div>
       </section>
     </div>
