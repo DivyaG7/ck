@@ -11,11 +11,13 @@ import icon1 from '../assets/icon-8.svg'
 import icon2 from '../assets/icon-4.svg'
 import icon3 from '../assets/icon-9.svg'
 import '../components/home.css'
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const ChangingWords = () => {
     const words = ["tailored", "smart", "fast"];
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -33,6 +35,15 @@ const ChangingWords = () => {
 
 
 export const Home = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleChange = (isVisible) => {
+        if (isVisible) {
+            setIsVisible(true);
+        }
+    };
+
     return (
         <div>
             <div className='container mt-5'>
@@ -46,11 +57,17 @@ export const Home = () => {
 
                         <p style={{ fontSize: '20px' }}>Unlock financial success with our trusted <br></br>expertise and personalized services.</p>
 
-                        <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                        <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                     </div>
+
                     <div className='col-md-6 d-flex justify-content-center align-items-center'>
-                        <img src={home1} alt='home_page_image' className='img-fluid' />
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <img src={home1} alt='home_page_image' className='img-fluid' />
+                            </div>
+                        </VisibilitySensor>
                     </div>
+
                 </div>
             </div>
 
@@ -90,10 +107,14 @@ export const Home = () => {
                             <p style={{ fontSize: '20px' }}>Strong credit score</p>
                             <p style={{ fontSize: '20px' }}>Identification documents</p>
 
-                            <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                         </div>
                         <div className='col-md-6 d-flex justify-content-center align-items-canter'>
-                            <img src={home1} alt='home_page_image' className='img-fluid' />
+                            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                                <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
+                                    <img src={home1} alt='home_page_image' className='img-fluid' />
+                                </div>
+                            </VisibilitySensor>
                         </div>
                     </div>
                 </div>
@@ -104,7 +125,11 @@ export const Home = () => {
                     <div className='row pt-5'>
 
                         <div className='col-md-6 d-flex justify-content-center align-items-canter mb-4'>
-                            <img src={home1} alt='home_page_image' className='img-fluid' />
+                            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                                <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
+                                    <img src={home1} alt='home_page_image' className='img-fluid' />
+                                </div>
+                            </VisibilitySensor>
                         </div>
 
                         <div id='section-3' className='col-md-6 d-flex justify-content-center gap-2' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '8rem' }}>
@@ -115,7 +140,7 @@ export const Home = () => {
                             <p style={{ fontSize: '20px' }}>Hassle-free online application</p>
                             <p style={{ fontSize: '20px' }}>Legal consultation</p>
 
-                            <button id='button' style={{ width: '100px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -134,40 +159,46 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-5'>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                                <div className='col-lg-3 col-md-12 col-12'>
-                                    <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                                </div>
-                                <div className='col-lg-8 col-md-12 col-12'>
-                                    <h5>Speed</h5>
-                                    <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                    <div className='col-lg-3 col-md-12 col-12'>
+                                        <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                    </div>
+                                    <div className='col-lg-8 col-md-12 col-12'>
+                                        <h5>Speed</h5>
+                                        <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                                    </div>
                                 </div>
                             </div>
+                        </VisibilitySensor>
 
-                        </div>
-                        <div className='col-md-4 col-12 p-2'>
-                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                                <div className='col-lg-3 col-md-12 col-12'>
-                                    <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                                </div>
-                                <div className='col-lg-8 col-md-12 col-12'>
-                                    <h5>Flexibility</h5>
-                                    <p>Tailored solutions adapting seamlessly to your evolving business.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                                <div className='col-lg-3 col-md-12 col-12'>
-                                    <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                                </div>
-                                <div className='col-lg-8 col-md-12 col-12'>
-                                    <h5>Confidence</h5>
-                                    <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                    <div className='col-lg-3 col-md-12 col-12'>
+                                        <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                    </div>
+                                    <div className='col-lg-8 col-md-12 col-12'>
+                                        <h5>Flexibility</h5>
+                                        <p>Tailored solutions adapting seamlessly to your evolving business.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </VisibilitySensor>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                                    <div className='col-lg-3 col-md-12 col-12'>
+                                        <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                                    </div>
+                                    <div className='col-lg-8 col-md-12 col-12'>
+                                        <h5>Confidence</h5>
+                                        <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </VisibilitySensor>
                     </div>
                 </div>
             </section>
@@ -215,105 +246,117 @@ export const Home = () => {
                 <div className='container' style={{ background: '#f6f6f4', marginTop: '80px', paddingBottom: '80px' }}>
                     <div className='row pt-2 pb-5 justify-content-center align-items-center'>
                         <div className='col-md-5 d-flex justify-content-center pt-5' style={{ textAlign: 'left', flexDirection: 'column', paddingLeft: '30px' }}>
-                            <p style={{ textAlign: 'left', color: '#f85c1d' }}>SIMPLIFIED PROCESS</p>
-                            <h1 style={{ fontSize: '50px' }}>Easy 3-step funding solution</h1>
+                            <p style={{ textAlign: 'left', color: '#f85c1d' }}>TESTIMONIALS</p>
+                            <h1 style={{ fontSize: '50px' }}>Real stories of businesses</h1>
                         </div>
                         <div className='col-md-4 pt-5'>
-                            <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Obtaining funding is hassle-free - apply online, receive a same-day decision, sign your contract.</p>
+                            <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Discover how businesses like yours transformed with our software. Real stories of growth, innovation, and success.</p>
                         </div>
                         <div className='col-md-3 pt-5'>
-                            <button id='button' className='mt-4' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Get Started</button>
+                            <button id='button' className='mt-4' style={{ width: '150px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>View all stories</button>
                         </div>
                     </div>
 
                     <div className='row mt-3'>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Frederic Hill</h5>
-                                        <h6>Founder & CEO</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial1} alt='testimonials' className='img-fluid w-50' />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-4 col-12 p-2'>
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Tailored solutions adapting seamlessly to your evolving business.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Julie Kyle</h5>
-                                        <h6>Account Executive</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial2} alt='testimonials' className='img-fluid w-50' />
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>As a small business, their funding fueled our vision, leading to expansion. Grateful for their instrumental support in our journey to success.<br></br><br></br></p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Frederic Hill</h5>
+                                            <h6>Founder & CEO</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial1} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Brendan Buck</h5>
-                                        <h6>Marketing Director</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial3} alt='testimonials' className='img-fluid w-50' />
+                        </VisibilitySensor>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>Their financial aid was pivotal, fueling our rapid growth. They understood our needs, providing strategic support crucial for our scaling journey.<br></br><br></br></p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Julie Kyle</h5>
+                                            <h6>Account Executive</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial2} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </VisibilitySensor>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>Their funding empowered our innovations, enabling us to introduce groundbreaking products. Their support pushed us towards innovation and excellence.</p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Brendan Buck</h5>
+                                            <h6>Marketing Director</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial3} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </VisibilitySensor>
                     </div>
 
                     <div className='row mt-3'>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Paige Lowery</h5>
-                                        <h6>Operations Manager</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial4} alt='testimonials' className='img-fluid w-50' />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-4 col-12 p-2'>
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Tailored solutions adapting seamlessly to your evolving business.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Stefan Ball</h5>
-                                        <h6>Marketing Manager</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial1} alt='testimonials' className='img-fluid w-50' />
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>Their support turned our dreams into a reality, providing not just funding but also guidance and encouragement. A true catalyst for our business success.</p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Paige Lowery</h5>
+                                            <h6>Operations Manager</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial4} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='col-md-4 col-12 p-2' >
-                            <div className='m-2 p-5' style={{ textAlign: 'left', background: 'white' }}>
-                                <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
-                                <div className='row d-flex justify-content-between align-items-center mt-4'>
-                                    <div className='col-lg-6 col-md-12 col-12'>
-                                        <h5>Frederic Hill</h5>
-                                        <h6>Founder & CEO</h6>
-                                    </div>
-                                    <div className='col-lg-6 col-md-12 col-12' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={testimonial2} alt='testimonials' className='img-fluid w-50' />
+                        </VisibilitySensor>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Stefan Ball</h5>
+                                            <h6>Marketing Manager</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial1} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </VisibilitySensor>
+                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
+                                    <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
+                                    <div className='row d-flex justify-content-between align-items-center mt-4'>
+                                        <div className='col-lg-6 col-md-12 col-8'>
+                                            <h5>Frederic Hill</h5>
+                                            <h6>Founder & CEO</h6>
+                                        </div>
+                                        <div className='col-lg-6 col-md-12 col-4'>
+                                            <img src={testimonial2} alt='testimonials' className='img-fluid w-75' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </VisibilitySensor>
                     </div>
 
                 </div>

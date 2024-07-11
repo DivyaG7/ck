@@ -90,3 +90,42 @@
   }
   
 }
+
+.modal-full-height {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px; /* Adjust width as needed */
+  z-index: 1050; /* Adjust as needed */
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-right {
+  right: 0 !important;
+  top: 0 !important;
+  height: 100%;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border-left: none;
+  border-radius: 0;
+}
+
+.modal-right .modal-dialog {
+  margin: 0;
+}
+
+.modal-right .modal-content {
+  border-radius: 0;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .modal-full-height {
+    width: 100%;
+  }
+}

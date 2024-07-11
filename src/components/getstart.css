@@ -1,0 +1,62 @@
+#fontawesome:hover{
+    color: white !important;
+    background: #f7570a !important;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox + .form-check-label {
+    position: relative;
+    padding-left: 30px; /* Increased padding for better spacing */
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .custom-checkbox + .form-check-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    background: white;
+    transition: all 0.2s ease;
+  }
+  
+  .custom-checkbox:checked + .form-check-label:before {
+    background: #f7570a;
+    border-color: #f7570a;
+  }
+  
+  .custom-checkbox + .form-check-label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .custom-checkbox:checked + .form-check-label:after {
+    opacity: 1;
+  }
+  
+
+  @media screen and (max-width: 500px) {
+    #nextstep p, h1, button{
+        text-align: left;
+    }
+  }

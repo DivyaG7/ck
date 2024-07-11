@@ -8,8 +8,18 @@ import team3 from '../assets/team3.jpg'
 import icon1 from '../assets/icon-8.svg'
 import icon2 from '../assets/icon-4.svg'
 import icon3 from '../assets/icon-9.svg'
+import VisibilitySensor from 'react-visibility-sensor';
 
 export const About = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleChange = (isVisible) => {
+    if (isVisible) {
+      setIsVisible(true);
+    }
+  };
+
 
   const [activeBox, setActiveBox] = useState('vision');
 
@@ -41,55 +51,62 @@ export const About = () => {
       <section id='about-bg'
       >
         <div className='container pe-5 ps-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className='row' style={{ background: '#f6f6f4' }}>
-            <div className='col-md-6 d-flex justify-content-center align-items-left p-5' style={{ textAlign: 'left', flexDirection: 'column' }}>
-              <p style={{ textAlign: 'left', color: '#f85c1d' }}>VALUES & CULTURE</p>
-              <h1 style={{ textAlign: 'left' }}>We keep our <br></br>
-                promises</h1>
+          <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+            <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+              <div className='row' style={{ background: '#f6f6f4' }}>
+                <div className='col-md-6 d-flex justify-content-center align-items-left p-5' style={{ textAlign: 'left', flexDirection: 'column' }}>
+                  <p style={{ textAlign: 'left', color: '#f85c1d' }}>VALUES & CULTURE</p>
+                  <h1 style={{ textAlign: 'left' }}>We keep our <br></br>
+                    promises</h1>
 
-              <p className='mt-4' style={{ textAlign: 'left', fontSize: '20px' }}>We hold ourselves to the highest moral standards at all times.</p>
+                  <p className='mt-4' style={{ textAlign: 'left', fontSize: '20px' }}>We hold ourselves to the highest moral standards at all times.</p>
 
-              <div className="mt-4">
-                <div id='box' className="d-flex justify-content-center align-items-left" style={{ textAlign: 'center' }}>
-                  <div className="col-md-4">
-                    <div
-                      className={`box ${activeBox === 'vision' ? 'active' : ''}`}
-                      onClick={() => setActiveBox('vision')}
-                    >
-                      <h6>Vision</h6>
-                    </div>
+                  <div className="mt-4">
+                    <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                      <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+                        <div id='box' className="d-flex justify-content-center align-items-left" style={{ textAlign: 'center' }}>
+                          <div className="col-md-4">
+                            <div
+                              className={`box ${activeBox === 'vision' ? 'active' : ''}`}
+                              onClick={() => setActiveBox('vision')}
+                            >
+                              <h6>Vision</h6>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div
+                              className={`box ${activeBox === 'mission' ? 'active' : ''}`}
+                              onClick={() => setActiveBox('mission')}
+                            >
+                              <h6>Mission</h6>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div
+                              className={`box ${activeBox === 'values' ? 'active' : ''}`}
+                              onClick={() => setActiveBox('values')}
+                            >
+                              <h6>Values</h6>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="row mt-5">
+                          <div className="col-12" style={{ fontSize: '17px', lineHeight: '30px' }}>
+                            {renderContent()}
+                          </div>
+                        </div>
+                      </div>
+                    </VisibilitySensor>
                   </div>
-                  <div className="col-md-4">
-                    <div
-                      className={`box ${activeBox === 'mission' ? 'active' : ''}`}
-                      onClick={() => setActiveBox('mission')}
-                    >
-                      <h6>Mission</h6>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div
-                      className={`box ${activeBox === 'values' ? 'active' : ''}`}
-                      onClick={() => setActiveBox('values')}
-                    >
-                      <h6>Values</h6>
-                    </div>
-                  </div>
+
                 </div>
-
-                <div className="row mt-5">
-                  <div className="col-12" style={{ fontSize: '17px', lineHeight: '30px' }}>
-                    {renderContent()}
-                  </div>
+                <div className='col-md-6 d-flex justify-content-center align-items-center'>
+                  <img src={about1} alt='about_page_image' className='img-fluid w-100 h-100' />
                 </div>
-
               </div>
-
             </div>
-            <div className='col-md-6 d-flex justify-content-center align-items-center'>
-              <img src={about1} alt='about_page_image' className='img-fluid w-100 h-100' />
-            </div>
-          </div>
+          </VisibilitySensor>
         </div>
       </section>
 
@@ -102,27 +119,33 @@ export const About = () => {
 
         <div className='container pe-5 ps-5'>
           <div className='row'>
-            <div className='col-md-4'>
-              <div className='p-4' style={{ background: '#f6f6f4' }}>
-                <img src={team1} alt='team-member' className='img-fluid' />
-                <h4 className='mt-4'>Sara Grant</h4>
-                <p>Marketing Manager</p>
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='p-4' style={{ background: '#f6f6f4' }}>
+                  <img src={team1} alt='team-member' className='img-fluid' />
+                  <h4 className='mt-4'>Sara Grant</h4>
+                  <p>Marketing Manager</p>
+                </div>
               </div>
-            </div>
-            <div className='col-md-4'>
-              <div className='p-4' style={{ background: '#f6f6f4' }}>
-                <img src={team2} alt='team-member' className='img-fluid' />
-                <h4 className='mt-4'>Claire Olson</h4>
-                <p>Sales Manager</p>
+            </VisibilitySensor>
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='p-4' style={{ background: '#f6f6f4' }}>
+                  <img src={team2} alt='team-member' className='img-fluid' />
+                  <h4 className='mt-4'>Claire Olson</h4>
+                  <p>Sales Manager</p>
+                </div>
               </div>
-            </div>
-            <div className='col-md-4'>
-              <div className='p-4' style={{ background: '#f6f6f4' }}>
-                <img src={team3} alt='team-member' className='img-fluid' />
-                <h4 className='mt-4'>Reece Bronson</h4>
-                <p>Financial Manager</p>
+            </VisibilitySensor>
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='p-4' style={{ background: '#f6f6f4' }}>
+                  <img src={team3} alt='team-member' className='img-fluid' />
+                  <h4 className='mt-4'>Reece Bronson</h4>
+                  <p>Financial Manager</p>
+                </div>
               </div>
-            </div>
+            </VisibilitySensor>
           </div>
         </div>
       </section>
@@ -141,45 +164,52 @@ export const About = () => {
           </div>
 
           <div className='row mt-5'>
-            <div className='col-md-4 col-12 p-2' >
-              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                <div className='col-lg-3 col-md-12 col-12'>
-                  <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                </div>
-                <div className='col-lg-8 col-md-12 col-12'>
-                  <h5>Speed</h5>
-                  <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                  <div className='col-lg-3 col-md-12 col-12'>
+                    <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                  </div>
+                  <div className='col-lg-8 col-md-12 col-12'>
+                    <h5>Speed</h5>
+                    <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                  </div>
                 </div>
               </div>
+            </VisibilitySensor>
 
-            </div>
-            <div className='col-md-4 col-12 p-2'>
-              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                <div className='col-lg-3 col-md-12 col-12'>
-                  <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                </div>
-                <div className='col-lg-8 col-md-12 col-12'>
-                  <h5>Flexibility</h5>
-                  <p>Tailored solutions adapting seamlessly to your evolving business.</p>
-                </div>
-              </div>
-            </div>
-            <div className='col-md-4 col-12 p-2' >
-              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                <div className='col-lg-3 col-md-12 col-12'>
-                  <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
-                </div>
-                <div className='col-lg-8 col-md-12 col-12'>
-                  <h5>Confidence</h5>
-                  <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                  <div className='col-lg-3 col-md-12 col-12'>
+                    <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                  </div>
+                  <div className='col-lg-8 col-md-12 col-12'>
+                    <h5>Flexibility</h5>
+                    <p>Tailored solutions adapting seamlessly to your evolving business.</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </VisibilitySensor>
+
+            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+              <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
+                  <div className='col-lg-3 col-md-12 col-12'>
+                    <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
+                  </div>
+                  <div className='col-lg-8 col-md-12 col-12'>
+                    <h5>Confidence</h5>
+                    <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                  </div>
+                </div>
+              </div>
+            </VisibilitySensor>
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   )
 }
 
