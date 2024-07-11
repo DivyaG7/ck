@@ -209,6 +209,24 @@ export const About = () => {
         </div>
       </section >
 
+      <section id='nextstep'>
+        <div className='container mt-5 mb-5'>
+          <div className='row pt-5'>
+            <div className='d-flex justify-content-center align-items-center mb-4 gap-3' style={{ flexDirection: 'column' }}>
+              <p style={{ color: '#f85c1d' }}>START TODAY</p>
+              <h1 style={{ fontSize: '50px' }}>
+                Ready to get started?<br></br>
+                Take the next step
+              </h1>
+
+              <p style={{ fontSize: '20px' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
+
+              <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div >
   )
 }
