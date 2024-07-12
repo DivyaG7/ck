@@ -51,35 +51,35 @@ export const Home = () => {
         name: '',
         email: '',
         message: ''
-      });
-    
-      const handleChange = (e) => {
+    });
+
+    const handleChange = (e) => {
         setFormData({
-          ...formData,
-          [e.target.id]: e.target.value
+            ...formData,
+            [e.target.id]: e.target.value
         });
-      };
-    
-      const handleSubmit = async (e) => {
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         try {
-          const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
-          const response = await axios.post(url, formData);
-    
-          console.log('Form submitted successfully!', response.data);
-    
-          // Reset form data after successful submission
-          setFormData({
-            name: '',
-            email: '',
-            message: ''
-          });
-    
+            const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
+            const response = await axios.post(url, formData);
+
+            console.log('Form submitted successfully!', response.data);
+
+            // Reset form data after successful submission
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            });
+
         } catch (error) {
-          console.error('Error submitting form:', error);
+            console.error('Error submitting form:', error);
         }
-      };
+    };
 
     return (
         <div id='home'>
@@ -444,85 +444,90 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className='p-5' style={{ background: '#274d43' }}>
-                <div className='container p-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                        <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
-                            <div className='row'>
-                                <div className='col-md-6 d-flex justify-content-center align-items-left p-5' style={{ textAlign: 'left', flexDirection: 'column', color: 'white' }}>
-                                    <p style={{ textAlign: 'left' }}>CONNECT</p>
-                                    <h2 className='mb-3' style={{ textAlign: 'left'}}>Get in touch today</h2>
-                                    <p style={{ textAlign: 'left'}}>Reach out to us for assistance and start your financial journey.</p>
-                                    
-                                    <div className='p-4 mb-4 mt-4' style={{background: '#365a50'}}>
-                                        <h5>Address:</h5>
-                                        <p>15 Washington Square</p>
-                                        <p>New York, NY 10075, USA</p>
+            <section className='pt-5 pb-5' style={{ background: '#274d43' }}>
+                <div className='container'>
+                    <div className='pe-3 ps-3 pt-5 pb-5'>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
+                            <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+                                <div className='row'>
+                                    <div className='col-md-5 d-flex flex-column justify-content-center align-items-start p-3' style={{ textAlign: 'left', color: 'white' }}>
+                                        <p>CONNECT</p>
+                                        <h2 className='mb-3'>Get in touch today</h2>
+                                        <p>Reach out to us for assistance and start your financial journey.</p>
+
+                                        <div className='p-4 mb-4 mt-4 w-100' style={{ background: '#365a50' }}>
+                                            <h5>Address:</h5>
+                                            <p>15 Washington Square</p>
+                                            <p>New York, NY 10075, USA</p>
+                                        </div>
+
+                                        <div className='p-4 w-100' style={{ background: '#365a50' }}>
+                                            <h5>Contacts:</h5>
+                                            <p>Email: hello@finpath.com</p>
+                                            <p>Phone: +1 (215) 555-1122</p>
+                                        </div>
                                     </div>
 
-                                    <div className='p-4' style={{background: '#365a50'}}>
-                                        <h5>Contacts:</h5>
-                                        <p>Email: hello@finpath.com</p>
-                                        <p>Phone: +1 (215) 555-1122</p>
-                                    </div>
-                                </div>
+                                    <div className='col-md-1'></div> {/* Add this empty column for spacing */}
 
-                                <div className='col-md-6 p-5' style={{ background: 'white' }}>
-                                    <p style={{ textAlign: 'left', color: '#f85c1d'}}>GET IN TOUCH</p>
-                                    <h4 style={{ textAlign: 'left' }}>Let's get started</h4>
-                                    <form className='mt-2' onSubmit={handleSubmit}>
-                                        <div className="mb-3 mt-4">
-                                            <input
-                                                type="text"
-                                                className="form-control text-left"
-                                                id="name"
-                                                placeholder="Name *"
-                                                style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4' }}
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-                                        
-                                        <div className="mb-3 mt-4">
-                                            <input
-                                                type="email"
-                                                className="form-control text-left"
-                                                id="email"
-                                                placeholder="Email address *"
-                                                style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4'  }}
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-                                        
-                                        <div className="mb-4 mt-4">
-                                            <h5 style={{ textAlign: 'left' }} className='mb-4'>Additional information (optional)</h5>
-                                            <textarea
-                                                className="form-control text-left"
-                                                id="message"
-                                                placeholder="Anything else you would like us to know?"
-                                                style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500', background: '#f6f6f4'  }}
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                required
-                                            ></textarea>
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="btn mt-2"
-                                            style={{ background: '#f85c1d', color: 'white', width: '100%', borderRadius: '0', padding: '10px', fontWeight: '500' }}
-                                        >
-                                            Submit request
-                                        </button>
-                                    </form>
+                                    <div className='col-md-6 p-5' style={{ background: 'white' }}>
+                                        <p style={{ textAlign: 'left', color: '#f85c1d' }}>GET IN TOUCH</p>
+                                        <h4 style={{ textAlign: 'left' }}>Let's get started</h4>
+                                        <form className='mt-2' onSubmit={handleSubmit}>
+                                            <div className="mb-3 mt-4">
+                                                <input
+                                                    type="text"
+                                                    className="form-control text-left"
+                                                    id="name"
+                                                    placeholder="Name *"
+                                                    style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4' }}
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+
+                                            <div className="mb-3 mt-4">
+                                                <input
+                                                    type="email"
+                                                    className="form-control text-left"
+                                                    id="email"
+                                                    placeholder="Email address *"
+                                                    style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4' }}
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+
+                                            <div className="mb-4 mt-4">
+                                                <h5 style={{ textAlign: 'left' }} className='mb-4'>Additional information (optional)</h5>
+                                                <textarea
+                                                    className="form-control text-left"
+                                                    id="message"
+                                                    placeholder="Anything else you would like us to know?"
+                                                    style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500', background: '#f6f6f4' }}
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                ></textarea>
+                                            </div>
+                                            <button
+                                                type="submit"
+                                                className="btn mt-2"
+                                                style={{ background: '#f85c1d', color: 'white', width: '100%', borderRadius: '0', padding: '10px', fontWeight: '500' }}
+                                            >
+                                                Submit request
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </VisibilitySensor>
+                        </VisibilitySensor>
+                    </div>
                 </div>
             </section>
+
 
         </div>
     )
