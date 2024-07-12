@@ -222,8 +222,8 @@ export const About = () => {
               </h1>
 
               <p style={{ fontSize: '20px', textAlign: 'center' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
-
-              <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
+              <a href='/Getstart'>
+                <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button></a>
             </div>
           </div>
         </div>

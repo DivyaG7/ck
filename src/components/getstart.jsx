@@ -247,13 +247,13 @@ export const Getstart = () => {
                         <div className='d-flex justify-content-center align-items-center mb-4 gap-3' style={{ flexDirection: 'column' }}>
                             <p style={{ color: '#f85c1d' }}>START TODAY</p>
                             <h1 style={{ fontSize: '50px', textAlign: 'center' }}>
-                            Ready to get started?<br></br>
-                            Take the next step
+                                Ready to get started?<br></br>
+                                Take the next step
                             </h1>
 
-                            <p style={{ fontSize: '20px', textAlign: 'center'}}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
-
-                            <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
+                            <p style={{ fontSize: '20px', textAlign: 'center' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
+                            <a href='/Getstart'>
+                                <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button></a>
                         </div>
                     </div>
                 </div>
