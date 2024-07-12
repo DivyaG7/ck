@@ -51,35 +51,34 @@ export const Home = () => {
         name: '',
         email: '',
         message: ''
-    });
-
-    const handleChange = (e) => {
+      });
+    
+      const handleChange = (e) => {
         setFormData({
-            ...formData,
-            [e.target.id]: e.target.value
+          ...formData,
+          [e.target.id]: e.target.value
         });
-    };
-
-    const handleSubmit = async (e) => {
+      };
+    
+      const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
-            const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
-            const response = await axios.post(url, formData);
-
-            console.log('Form submitted successfully!', response.data);
-
-            // Reset form data after successful submission
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            });
-
+          const url = 'https://ckconsultants.onrender.com/form1'; // Replace with your backend endpoint
+          const response = await axios.post(url, formData);
+    
+          console.log('Form 1 submitted successfully!', response.data);
+    
+          // Reset form data after successful submission
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
         } catch (error) {
-            console.error('Error submitting form:', error);
+          console.error('Error submitting form 1:', error);
         }
-    };
+      };
 
     return (
         <div id='home'>
@@ -517,7 +516,6 @@ export const Home = () => {
                                                     style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500', background: '#f6f6f4' }}
                                                     value={formData.message}
                                                     onChange={handleChange}
-                                                    required
                                                 ></textarea>
                                             </div>
                                             <button
