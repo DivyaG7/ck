@@ -263,17 +263,17 @@ export const Home = () => {
                         <div id='loan' className='row' style={{ background: '#274d43', padding: '2rem 2rem' }}>
                             <div id='personal-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>01</h6>
-                                <h4 className='mt-3'>Online application<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
+                                <h4 className='mt-3'>Online application<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></h4>
                                 <p className='mt-3'>Get up and running in no time by creating a free account. Register only with your email address.</p>
                             </div>
                             <div id='startup-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>02</h6>
-                                <h4 className='mt-3'>Same-day decision<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
+                                <h4 className='mt-3'>Same-day decision<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></h4>
                                 <p className='mt-3'>Go through the summaries for each of your options, taking note of which ones check.</p>
                             </div>
                             <div id='business-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
                                 <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>03</h6>
-                                <h4 className='mt-3'>Sign your contract<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
+                                <h4 className='mt-3'>Sign your contract<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></h4>
                                 <p className='mt-3'>Effortlessly finalize your agreement online, ensuring a smooth and prompt funding process for you.</p>
                             </div>
                         </div>
