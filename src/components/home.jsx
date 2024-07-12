@@ -47,7 +47,7 @@ export const Home = () => {
     };
 
     return (
-        <div>
+        <div id='home'>
             <div className='container mt-5'>
                 <div className='row pt-5'>
                     <div className='col-md-6 d-flex justify-content-center mb-4 gap-3' style={{ textAlign: 'left', flexDirection: 'column' }}>
@@ -65,7 +65,7 @@ export const Home = () => {
                     <div className='col-md-6 d-flex justify-content-center align-items-center'>
                         <VisibilitySensor onChange={handleChange} partialVisibility={100}>
                             <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
-                                <img src={home1} alt='home_page_image' className='img-fluid' />
+                                <img src={home1} alt='home_page_image' className='img-fluid'/>
                             </div>
                         </VisibilitySensor>
                     </div>
@@ -224,18 +224,18 @@ export const Home = () => {
 
                         <div id='loan' className='row' style={{ background: '#274d43', padding: '2rem 2rem' }}>
                             <div id='personal-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
-                                <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>01</h5>
-                                <h3 className='mt-3'>Online application<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
+                                <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>01</h6>
+                                <h4 className='mt-3'>Online application<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
                                 <p className='mt-3'>Get up and running in no time by creating a free account. Register only with your email address.</p>
                             </div>
                             <div id='startup-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
-                                <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>02</h5>
-                                <h3 className='mt-3'>Same-day decision<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
+                                <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>02</h6>
+                                <h4 className='mt-3'>Same-day decision<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
                                 <p className='mt-3'>Go through the summaries for each of your options, taking note of which ones check.</p>
                             </div>
                             <div id='business-loan' className='col-md-4 mb-4' style={{ textAlign: 'left', color: 'white', padding: '20px' }}>
-                                <h5 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>03</h5>
-                                <h3 className='mt-3'>Sign your contract<FontAwesomeIcon icon={faArrowRight} className='ms-4' /></h3>
+                                <h6 style={{ boxSizing: 'border-box', border: 'none', background: '#365a50', width: 'fit-content', padding: '15px' }}>03</h6>
+                                <h4 className='mt-3'>Sign your contract<FontAwesomeIcon icon={faArrowRight} className='ms-3' /></h4>
                                 <p className='mt-3'>Effortlessly finalize your agreement online, ensuring a smooth and prompt funding process for you.</p>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ export const Home = () => {
                         <div className='col-md-4 pt-5'>
                             <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Discover how businesses like yours transformed with our software. Real stories of growth, innovation, and success.</p>
                         </div>
-                        <div className='col-md-3 pt-5'>
+                        <div className='col-md-3 pt-5 d-flex align-items-left ps-5'>
                             <button id='button' className='mt-4' style={{ width: '170px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>View all stories<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                     </div>
@@ -375,7 +375,7 @@ export const Home = () => {
                         <div className='col-md-4 pt-5'>
                             <p style={{ textAlign: 'left', fontSize: '18px', paddingLeft: '30px' }}>Explore insightful content that keeps you ahead of the curve and connected to the pulse of what's happening.</p>
                         </div>
-                        <div className='col-md-3 pt-5'>
+                        <div className='col-md-3 pt-5 d-flex align-items-left ps-5'>
                             <button className='mt-4' id='button' style={{ width: '170px', padding: '.5rem', background: '#f85c1d', color: 'black', border: 'none' }}>Read all articles<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                     </div>

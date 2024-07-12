@@ -1,0 +1,43 @@
+@media screen and (max-width: 767px){
+    #footer{
+        flex-direction: column !important;
+        text-align: left;
+    }
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Adjust as needed */
+}
+
+.social-media-links {
+    gap: 15px; /* Adjust spacing between icons */
+}
+
+.social-icon {
+    font-size: 22px; /* Adjust icon size */
+    color: #000; /* Adjust icon color */
+    transition: color 0.3s ease;
+    background: #f6f6f4;
+    font-size: 22px; /* Slightly reduce the size */
+    transform: scale(0.7); /* Scale down to reduce perceived thickness */
+    padding: 20px;
+}
+
+.social-icon:hover {
+    color: white; /* Adjust hover color */
+    background: #f85c1d;
+}
+

@@ -40,8 +40,8 @@ export const About = () => {
 
   return (
     <div>
-      <div id='about' className='p-5 w-100' style={{ background: '#174035', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5 }}>
-        <h1 className='mt-5' style={{ fontSize: '50px' }}>Making a positive impact</h1>
+      <div id='about' className='p-5 w-100' style={{ background: '#174035', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5, textAlign: 'center' }}>
+        <h1 className='mt-5' style={{ fontSize: '50px', textAlign: 'center' }}>Making a positive impact</h1>
         <p style={{ fontSize: '20px', width: '50%' }}>With a passion for technology and a commitment to excellence, we empower businesses to thrive in the digital landscape.</p>
         <ul className='mb-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 5, listStyle: 'none' }}>
           <li className="underline"><Link to='/' style={{ textDecoration: 'none', color: 'white' }}>Home</Link></li>
@@ -113,16 +113,16 @@ export const About = () => {
       </section>
 
       <section>
-        <div id='about' className='p-5 w-100' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5 }}>
-          <p className='mt-5' style={{ textAlign: 'left', color: '#f85c1d' }}>TEAM MEMBERS</p>
-          <h1 style={{ fontSize: '45px' }}>Get to know our amazing team</h1>
+        <div id='about' className='p-5 w-100' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5, textAlign: 'center' }}>
+          <p className='mt-5' style={{ color: '#f85c1d' }}>TEAM MEMBERS</p>
+          <h1 style={{ fontSize: '45px', textAlign: 'center' }}>Get to know our amazing team</h1>
           <p style={{ fontSize: '20px', width: '43%' }}>With a passion for innovation and a dedication to excellence, we bring diverse expertise to every project we undertake.</p>
         </div>
 
         <div className='container pe-5 ps-5'>
           <div className='row'>
             <VisibilitySensor onChange={handleChange} partialVisibility={100}>
-              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+              <div className={`col-md-4 mb-4 ${isVisible ? 'bottom-to-top' : ''}`}>
                 <div className='p-4' style={{ background: '#f6f6f4' }}>
                   <img src={team1} alt='team-member' className='img-fluid' />
                   <h4 className='mt-4'>Sara Grant</h4>
@@ -131,7 +131,7 @@ export const About = () => {
               </div>
             </VisibilitySensor>
             <VisibilitySensor onChange={handleChange} partialVisibility={100}>
-              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+              <div className={`col-md-4 mb-4 ${isVisible ? 'bottom-to-top' : ''}`}>
                 <div className='p-4' style={{ background: '#f6f6f4' }}>
                   <img src={team2} alt='team-member' className='img-fluid' />
                   <h4 className='mt-4'>Claire Olson</h4>
@@ -140,7 +140,7 @@ export const About = () => {
               </div>
             </VisibilitySensor>
             <VisibilitySensor onChange={handleChange} partialVisibility={100}>
-              <div className={`col-md-4 ${isVisible ? 'bottom-to-top' : ''}`}>
+              <div className={`col-md-4 mb-4 ${isVisible ? 'bottom-to-top' : ''}`}>
                 <div className='p-4' style={{ background: '#f6f6f4' }}>
                   <img src={team3} alt='team-member' className='img-fluid' />
                   <h4 className='mt-4'>Reece Bronson</h4>
@@ -216,12 +216,12 @@ export const About = () => {
           <div className='row pt-5'>
             <div className='d-flex justify-content-center align-items-center mb-4 gap-3' style={{ flexDirection: 'column' }}>
               <p style={{ color: '#f85c1d' }}>START TODAY</p>
-              <h1 style={{ fontSize: '50px' }}>
+              <h1 style={{ fontSize: '50px', textAlign: 'center' }}>
                 Ready to get started?<br></br>
                 Take the next step
               </h1>
 
-              <p style={{ fontSize: '20px' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
+              <p style={{ fontSize: '20px', textAlign: 'center' }}>Experience unparalleled service, cutting-edge <br></br>technology, and dedicated support.</p>
 
               <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
             </div>

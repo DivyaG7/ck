@@ -52,8 +52,8 @@ export const Contact = () => {
 
   return (
     <div>
-      <div id='about' className='p-5 w-100' style={{ background: '#174035', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5 }}>
-        <h1 className='mt-5' style={{ fontSize: '50px' }}>Let's keep in touch</h1>
+      <div id='about' className='p-5 w-100' style={{ background: '#174035', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5, textAlign: 'center' }}>
+        <h1 className='mt-5' style={{ fontSize: '50px', textAlign: 'center' }}>Let's keep in touch</h1>
         <p style={{ fontSize: '20px', width: '40%' }}>Feel free to reach out to us using the options below, and our dedicated team will respond to your inquiries promptly.</p>
         <ul className='mb-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 5, listStyle: 'none' }}>
           <li className="underline"><Link to='/' style={{ textDecoration: 'none', color: 'white' }}>Home</Link></li>
