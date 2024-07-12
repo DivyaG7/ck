@@ -14,6 +14,7 @@ import '../components/home.css'
 import VisibilitySensor from 'react-visibility-sensor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 
 const ChangingWords = () => {
@@ -40,11 +41,45 @@ export const Home = () => {
 
     const [isVisible, setIsVisible] = useState(false);
 
-    const handleChange = (isVisible) => {
+    const handleChange1 = (isVisible) => {
         if (isVisible) {
             setIsVisible(true);
         }
     };
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+      });
+    
+      const handleChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.id]: e.target.value
+        });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
+          const response = await axios.post(url, formData);
+    
+          console.log('Form submitted successfully!', response.data);
+    
+          // Reset form data after successful submission
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+    
+        } catch (error) {
+          console.error('Error submitting form:', error);
+        }
+      };
 
     return (
         <div id='home'>
@@ -63,9 +98,9 @@ export const Home = () => {
                     </div>
 
                     <div className='col-md-6 d-flex justify-content-center align-items-center'>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
-                                <img src={home1} alt='home_page_image' className='img-fluid'/>
+                                <img src={home1} alt='home_page_image' className='img-fluid' />
                             </div>
                         </VisibilitySensor>
                     </div>
@@ -112,7 +147,7 @@ export const Home = () => {
                             <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button>
                         </div>
                         <div className='col-md-6 d-flex justify-content-center align-items-canter'>
-                            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                                 <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
                                     <img src={home1} alt='home_page_image' className='img-fluid' />
                                 </div>
@@ -127,7 +162,7 @@ export const Home = () => {
                     <div className='row pt-5'>
 
                         <div className='col-md-6 d-flex justify-content-center align-items-canter mb-4'>
-                            <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                            <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                                 <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
                                     <img src={home1} alt='home_page_image' className='img-fluid' />
                                 </div>
@@ -161,7 +196,7 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-5'>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
@@ -175,7 +210,7 @@ export const Home = () => {
                             </div>
                         </VisibilitySensor>
 
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
@@ -188,7 +223,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
@@ -260,7 +295,7 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-3'>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>As a small business, their funding fueled our vision, leading to expansion. Grateful for their instrumental support in our journey to success.<br></br><br></br></p>
@@ -276,7 +311,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their financial aid was pivotal, fueling our rapid growth. They understood our needs, providing strategic support crucial for our scaling journey.<br></br><br></br></p>
@@ -292,7 +327,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their funding empowered our innovations, enabling us to introduce groundbreaking products. Their support pushed us towards innovation and excellence.</p>
@@ -311,7 +346,7 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-3'>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their support turned our dreams into a reality, providing not just funding but also guidance and encouragement. A true catalyst for our business success.</p>
@@ -327,7 +362,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
@@ -343,7 +378,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange} partialVisibility={100}>
+                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
                             <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
@@ -406,9 +441,86 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
+            <section className='p-5' style={{ background: '#274d43' }}>
+                <div className='container p-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
+                        <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+                            <div className='row'>
+                                <div className='col-md-6 d-flex justify-content-center align-items-left p-5' style={{ textAlign: 'left', flexDirection: 'column', color: 'white' }}>
+                                    <p style={{ textAlign: 'left' }}>CONNECT</p>
+                                    <h2 className='mb-3' style={{ textAlign: 'left'}}>Get in touch today</h2>
+                                    <p style={{ textAlign: 'left'}}>Reach out to us for assistance and start your financial journey.</p>
+                                    
+                                    <div className='p-4 mb-4 mt-4' style={{background: '#365a50'}}>
+                                        <h5>Address:</h5>
+                                        <p>15 Washington Square</p>
+                                        <p>New York, NY 10075, USA</p>
+                                    </div>
 
+                                    <div className='p-4' style={{background: '#365a50'}}>
+                                        <h5>Contacts:</h5>
+                                        <p>Email: hello@finpath.com</p>
+                                        <p>Phone: +1 (215) 555-1122</p>
+                                    </div>
+                                </div>
 
+                                <div className='col-md-6 p-5' style={{ background: 'white' }}>
+                                    <p style={{ textAlign: 'left', color: '#f85c1d'}}>GET IN TOUCH</p>
+                                    <h4 style={{ textAlign: 'left' }}>Let's get started</h4>
+                                    <form className='mt-2' onSubmit={handleSubmit}>
+                                        <div className="mb-3 mt-4">
+                                            <input
+                                                type="text"
+                                                className="form-control text-left"
+                                                id="name"
+                                                placeholder="Name *"
+                                                style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4' }}
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        
+                                        <div className="mb-3 mt-4">
+                                            <input
+                                                type="email"
+                                                className="form-control text-left"
+                                                id="email"
+                                                placeholder="Email address *"
+                                                style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500', background: '#f6f6f4'  }}
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        
+                                        <div className="mb-4 mt-4">
+                                            <h5 style={{ textAlign: 'left' }} className='mb-4'>Additional information (optional)</h5>
+                                            <textarea
+                                                className="form-control text-left"
+                                                id="message"
+                                                placeholder="Anything else you would like us to know?"
+                                                style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500', background: '#f6f6f4'  }}
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            className="btn mt-2"
+                                            style={{ background: '#f85c1d', color: 'white', width: '100%', borderRadius: '0', padding: '10px', fontWeight: '500' }}
+                                        >
+                                            Submit request
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </VisibilitySensor>
                 </div>
             </section>
 
