@@ -57,7 +57,7 @@ export const Getstart = () => {
         const selectedCheckboxes = Object.keys(formData.checkboxes).filter(key => formData.checkboxes[key]);
     
         try {
-            const url = 'http://localhost:8001/form2'; // Replace with your backend endpoint
+            const url = 'https://ckconsultants.onrender.com/form2'; // Replace with your backend endpoint
             const response = await axios.post(url, {
                 ...formData,
                 checkboxes: selectedCheckboxes,

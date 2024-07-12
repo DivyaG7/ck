@@ -21,7 +21,7 @@ export const Hiringform = ({ showModal, handleClose }) => {
     e.preventDefault();
 
     try {
-      const url = 'http://localhost:8001/form1'; // Replace with your backend endpoint
+      const url = 'https://ckconsultants.onrender.com/form1'; // Replace with your backend endpoint
       const response = await axios.post(url, formData);
 
       console.log('Form submitted successfully!', response.data);
