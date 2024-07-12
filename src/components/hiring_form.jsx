@@ -21,7 +21,7 @@ export const Hiringform = ({ showModal, handleClose }) => {
     e.preventDefault();
 
     try {
-      const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
+      const url = 'http://localhost:8001/form1'; // Replace with your backend endpoint
       const response = await axios.post(url, formData);
 
       console.log('Form submitted successfully!', response.data);
@@ -80,7 +80,6 @@ export const Hiringform = ({ showModal, handleClose }) => {
               style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500', background: '#f6f6f4' }}
               value={formData.message}
               onChange={handleChange}
-              required
             ></textarea>
           </div>
           <Button variant="primary" type="submit" className="mt-2" style={{ background: '#f85c1d', color: 'white', width: '100%', borderRadius: '0', padding: '10px', fontWeight: '500' }}>

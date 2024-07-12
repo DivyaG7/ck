@@ -34,10 +34,10 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
+      const url = 'http://localhost:8001/form1'; // Replace with your backend endpoint
       const response = await axios.post(url, formData);
 
-      console.log('Form submitted successfully!', response.data);
+      console.log('Form 1 submitted successfully!', response.data);
 
       // Reset form data after successful submission
       setFormData({
@@ -46,7 +46,7 @@ export const Contact = () => {
         message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form 1:', error);
     }
   };
 
@@ -107,7 +107,6 @@ export const Contact = () => {
                         style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500' }}
                         value={formData.message}
                         onChange={handleChange}
-                        required
                       ></textarea>
                     </div>
                     <button

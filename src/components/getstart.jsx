@@ -23,16 +23,17 @@ export const Getstart = () => {
         email: '',
         message: '',
         checkboxes: {
-            checkbox1: false,
-            checkbox2: false,
-            checkbox3: false,
-            checkbox4: false,
-            checkbox5: false,
+            'General enquiry': false,
+            'Billing and subscriptions': false,
+            'Corporate information': false,
+            'Security concern': false,
+            'Other': false,
         },
     });
 
     const handleChange = (e) => {
         const { id, value, type, checked } = e.target;
+    
         if (type === 'checkbox') {
             setFormData((prevState) => ({
                 ...prevState,
@@ -48,16 +49,22 @@ export const Getstart = () => {
             });
         }
     };
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        // Transform checkboxes object to an array of selected options
+        const selectedCheckboxes = Object.keys(formData.checkboxes).filter(key => formData.checkboxes[key]);
+    
         try {
-            const url = 'https://example.com/api/contact'; // Replace with your backend endpoint
-            const response = await axios.post(url, formData);
-
-            console.log('Form submitted successfully!', response.data);
-
+            const url = 'http://localhost:8001/form2'; // Replace with your backend endpoint
+            const response = await axios.post(url, {
+                ...formData,
+                checkboxes: selectedCheckboxes,
+            });
+    
+            console.log('Form 2 submitted successfully!', response.data);
+    
             // Reset form data after successful submission
             setFormData({
                 name: '',
@@ -65,17 +72,18 @@ export const Getstart = () => {
                 email: '',
                 message: '',
                 checkboxes: {
-                    checkbox1: false,
-                    checkbox2: false,
-                    checkbox3: false,
-                    checkbox4: false,
-                    checkbox5: false,
+                    'General enquiry': false,
+                    'Billing and subscriptions': false,
+                    'Corporate information': false,
+                    'Security concern': false,
+                    'Other': false,
                 },
             });
         } catch (error) {
-            console.error('Error submitting form:', error);
+            console.error('Error submitting form 2:', error);
         }
     };
+    
 
 
     return (
@@ -178,7 +186,6 @@ export const Getstart = () => {
                                                 style={{ border: 'none', padding: '10px', borderRadius: '0', fontWeight: '500' }}
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                required
                                             />
                                         </div>
                                         <div className="mb-3 mt-4">
@@ -195,21 +202,17 @@ export const Getstart = () => {
                                         </div>
                                         <div className="mt-4" style={{ display: 'flex', flexDirection: 'column' }}>
                                             <h5 style={{ textAlign: 'left' }} className='mb-4 mt-1'>How can we help?</h5>
-                                            {['checkbox1', 'checkbox2', 'checkbox3', 'checkbox4', 'checkbox5'].map((checkbox, index) => (
+                                            {['General enquiry', 'Billing and subscriptions', 'Corporate information', 'Security concern', 'Other'].map((description, index) => (
                                                 <div className="form-check" style={{ display: 'flex', gap: 5 }} key={index}>
                                                     <input
                                                         className="form-check-input custom-checkbox"
                                                         type="checkbox"
-                                                        id={checkbox}
-                                                        checked={formData.checkboxes[checkbox]}
+                                                        id={`checkbox${index + 1}`}
+                                                        checked={formData.checkboxes[`checkbox${index + 1}`]}
                                                         onChange={handleChange}
                                                     />
-                                                    <label className="form-check-label" htmlFor={checkbox}>
-                                                        {index === 0 && 'General enquiry'}
-                                                        {index === 1 && 'Billing and subscriptions'}
-                                                        {index === 2 && 'Corporate information'}
-                                                        {index === 3 && 'Security concern'}
-                                                        {index === 4 && 'Other'}
+                                                    <label className="form-check-label" htmlFor={`checkbox${index + 1}`}>
+                                                        {description}
                                                     </label>
                                                 </div>
                                             ))}
@@ -223,7 +226,6 @@ export const Getstart = () => {
                                                 style={{ border: 'none', padding: '10px', borderRadius: '0', height: '150px', fontWeight: '500' }}
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                required
                                             ></textarea>
                                         </div>
                                         <button
