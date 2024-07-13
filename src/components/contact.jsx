@@ -225,7 +225,7 @@ export const Contact = () => {
               <p className="mb-1"><span style={{ fontWeight: 'bold' }}>Email:</span> hello@company.com</p>
             </div>
 
-            <h3 className='mt-4'>Opening hours</h3>
+            {/* <h3 className='mt-4'>Opening hours</h3>
             <div className='d-flex flex-md-row justify-content-between mt-4'>
               <div className='d-flex flex-column'>
                 <p className="mb-1">Monday - Friday</p>
@@ -237,6 +237,25 @@ export const Contact = () => {
                 <p className="mb-1">09.00 AM - 2.00 PM</p>
                 <p className="mb-1">Closed</p>
               </div>
+            </div> */}
+
+            <div className='mt-4' style={{ textAlign: 'left' }}>
+              <h5>Opening hours</h5>
+              <div className='d-flex flex-md-row flex-column justify-content-between mt-4 gap-3'>
+                <p className="mb-1">Monday - Friday</p>
+                <p className="mb-1">09.00 AM - 6.00 PM</p>
+              </div>
+              <div className='mb-2 mt-2' style={{ borderBottom: '2px solid #f0f0f9' }}></div>
+              <div className='d-flex flex-md-row flex-column justify-content-between mt-2 gap-3'>
+                <p className="mb-1">Saturday</p>
+                <p className="mb-1">09.00 AM - 2.00 PM</p>
+              </div>
+              <div className='mb-2 mt-2' style={{ borderBottom: '2px solid #f0f0f9' }}></div>
+              <div className='d-flex flex-md-row flex-column justify-content-between mt-2 gap-3'>
+                <p className="mb-1">Sunday</p>
+                <p className="mb-1">Closed</p>
+              </div>
+              <div className='mb-2 mt-2' style={{ borderBottom: '2px solid #f0f0f9' }}></div>
             </div>
           </div>
 
