@@ -1,0 +1,8 @@
+#news a{
+    text-decoration: none;
+    color: black;
+}
+
+#news a:hover{
+    text-decoration: 1px underline;
+}
