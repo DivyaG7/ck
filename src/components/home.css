@@ -68,7 +68,7 @@
 @keyframes bottomToTop {
   from {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(40%);
   }
   to {
     opacity: 1;
