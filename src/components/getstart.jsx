@@ -203,7 +203,7 @@ export const Getstart = () => {
                                         <div className="mt-4" style={{ display: 'flex', flexDirection: 'column' }}>
                                             <h5 style={{ textAlign: 'left' }} className='mb-4 mt-1'>How can we help?</h5>
                                             {['General enquiry', 'Billing and subscriptions', 'Corporate information', 'Security concern', 'Other'].map((description, index) => (
-                                                <div className="form-check" style={{ display: 'flex', gap: 5 }} key={index}>
+                                                <div className="form-check" style={{ display: 'flex', gap: 5, textAlign: 'left' }} key={index}>
                                                     <input
                                                         className="form-check-input custom-checkbox"
                                                         type="checkbox"

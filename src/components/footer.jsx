@@ -10,7 +10,7 @@ export const Footer = () => {
     <div>
       <div style={{ borderBottom: '2px solid #f0f0f9' }}></div>
       <div className='container d-flex flex-md-row flex-column justify-content-between align-items-left mb-3 mt-3'>
-          <img src={logo} alt="Logo" className="logo mb-3" />
+        <img src={logo} alt="Logo" className="logo mb-3" />
 
         <div className='d-flex social-media-links'>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
