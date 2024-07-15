@@ -40,12 +40,48 @@ const ChangingWords = () => {
 export const Home = () => {
 
     const [isVisible, setIsVisible] = useState(false);
+    const [isVisible2, setIsVisible2] = useState(false);
+    const [isVisible3, setIsVisible3] = useState(false);
+    const [isVisible4, setIsVisible4] = useState(false);
+    const [isVisible5, setIsVisible5] = useState(false);
+    const [isVisible6, setIsVisible6] = useState(false);
 
     const handleChange1 = (isVisible) => {
         if (isVisible) {
             setIsVisible(true);
         }
     };
+
+    const handleChange2 = (isVisible2) => {
+        if (isVisible2) {
+            setIsVisible2(true);
+        }
+    };
+
+    const handleChange3 = (isVisible3) => {
+        if (isVisible3) {
+            setIsVisible3(true);
+        }
+    };
+
+    const handleChange4 = (isVisible4) => {
+        if (isVisible4) {
+            setIsVisible4(true);
+        }
+    };
+
+    const handleChange5 = (isVisible5) => {
+        if (isVisible5) {
+            setIsVisible5(true);
+        }
+    };
+
+    const handleChange6 = (isVisible6) => {
+        if (isVisible6) {
+            setIsVisible6(true);
+        }
+    };
+
 
     const [formData, setFormData] = useState({
         name: '',
@@ -148,8 +184,8 @@ export const Home = () => {
                                 <button id='button' style={{ width: '130px', padding: '.5rem', background: '#f85c1d', color: 'white', border: 'none' }}>Get Started<FontAwesomeIcon icon={faArrowRight} className='ms-2' /></button></a>
                         </div>
                         <div className='col-md-6 d-flex justify-content-center align-items-canter'>
-                            <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                                <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
+                            <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+                                <div className={` ${isVisible2 ? 'bottom-to-top' : ''}`}>
                                     <img src={home1} alt='home_page_image' className='img-fluid' />
                                 </div>
                             </VisibilitySensor>
@@ -163,8 +199,8 @@ export const Home = () => {
                     <div className='row pt-5'>
 
                         <div className='col-md-6 d-flex justify-content-center align-items-canter mb-4'>
-                            <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                                <div className={` ${isVisible ? 'bottom-to-top' : ''}`}>
+                            <VisibilitySensor onChange={handleChange3} partialVisibility={100}>
+                                <div className={` ${isVisible3 ? 'bottom-to-top' : ''}`}>
                                     <img src={home1} alt='home_page_image' className='img-fluid' />
                                 </div>
                             </VisibilitySensor>
@@ -198,8 +234,8 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-5'>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange4} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible4 ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
                                         <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
@@ -212,8 +248,8 @@ export const Home = () => {
                             </div>
                         </VisibilitySensor>
 
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange4} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible4 ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
                                         <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
@@ -225,8 +261,8 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange4} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible4 ? 'bottom-to-top' : ''}`}>
                                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                                     <div className='col-lg-3 col-md-12 col-12'>
                                         <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
@@ -298,8 +334,8 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-3'>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>As a small business, their funding fueled our vision, leading to expansion. Grateful for their instrumental support in our journey to success.<br></br><br></br></p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -314,8 +350,8 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their financial aid was pivotal, fueling our rapid growth. They understood our needs, providing strategic support crucial for our scaling journey.<br></br><br></br></p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -330,8 +366,8 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their funding empowered our innovations, enabling us to introduce groundbreaking products. Their support pushed us towards innovation and excellence.</p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -349,8 +385,8 @@ export const Home = () => {
                     </div>
 
                     <div className='row mt-3'>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>Their support turned our dreams into a reality, providing not just funding but also guidance and encouragement. A true catalyst for our business success.</p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -365,8 +401,8 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -381,8 +417,8 @@ export const Home = () => {
                                 </div>
                             </div>
                         </VisibilitySensor>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange5} partialVisibility={100}>
+                            <div className={`col-md-4 col-12 p-2 ${isVisible5 ? 'bottom-to-top' : ''}`}>
                                 <div className='m-2 p-4' style={{ textAlign: 'left', background: 'white' }}>
                                     <p>During tough times, their funding and guidance were instrumental. Together, we navigated challenges, emerged stronger, and continued our journey.</p>
                                     <div className='row d-flex justify-content-between align-items-center mt-4'>
@@ -454,8 +490,8 @@ export const Home = () => {
             <section className='pt-5 pb-5' style={{ background: '#274d43' }}>
                 <div className='container'>
                     <div className='pe-3 ps-3 pt-5 pb-5'>
-                        <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                            <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+                        <VisibilitySensor onChange={handleChange6} partialVisibility={100}>
+                            <div className={`${isVisible6 ? 'bottom-to-top' : ''}`}>
                                 <div className='row'>
                                     <div className='col-md-5 d-flex flex-column justify-content-center align-items-start p-3' style={{ textAlign: 'left', color: 'white' }}>
                                         <p>CONNECT</p>

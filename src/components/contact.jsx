@@ -10,10 +10,17 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 export const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
 
   const handleChange1 = (isVisible) => {
     if (isVisible) {
       setIsVisible(true);
+    }
+  };
+
+  const handleChange2 = (isVisible2) => {
+    if (isVisible2) {
+      setIsVisible2(true);
     }
   };
 
@@ -124,8 +131,8 @@ export const Contact = () => {
                   <div className="image-container">
                     <img src={contact} alt='about_page_image' className='img-fluid w-100 h-100' style={{ marginLeft: '12px' }} />
                     <div className='overlay-content position-absolute w-100 bottom-0 p-5' style={{ textAlign: 'left' }}>
-                      <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-                        <div className={`${isVisible ? 'bottom-to-top' : ''}`}>
+                      <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+                        <div className={`${isVisible2 ? 'bottom-to-top' : ''}`}>
                           <h3>The team's exceptional service and proactive advice have been instrumental in optimizing our financial processes.</h3>
                         </div>
                       </VisibilitySensor>
@@ -144,8 +151,8 @@ export const Contact = () => {
 
       <section className='container'>
         <div className='row mt-5'>
-          <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
               <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                 <div className='col-lg-3 col-md-12 col-12'>
                   <img src={con_icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
@@ -158,8 +165,8 @@ export const Contact = () => {
             </div>
           </VisibilitySensor>
 
-          <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
               <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                 <div className='col-lg-3 col-md-12 col-12'>
                   <img src={con_icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
@@ -171,8 +178,8 @@ export const Contact = () => {
               </div>
             </div>
           </VisibilitySensor>
-          <VisibilitySensor onChange={handleChange1} partialVisibility={100}>
-            <div className={`col-md-4 col-12 p-2 ${isVisible ? 'bottom-to-top' : ''}`}>
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
               <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
                 <div className='col-lg-3 col-md-12 col-12'>
                   <img src={con_icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
