@@ -41,11 +41,21 @@ export const About = () => {
   const renderContent = () => {
     switch (activeBox) {
       case 'vision':
-        return <p>Our vision is to be the most trusted provider of innovative solutions, driving success and growth for our clients.</p>;
+        return <p>To be the leading consultancy firm in insolvency and bankruptcy services,
+          recognized for our expertise, integrity, and commitment to delivering innovative solutions that
+          drive value for our clients and the community at large.</p>;
       case 'mission':
-        return <p>Our mission is to deliver high-quality products and services that exceed our clients' expectations through continuous improvement and innovation.</p>;
+        return <p>To provide unparalleled advisory and professional services in the field of
+          insolvency and bankruptcy, ensuring efficient and effective resolution processes that protect the
+          interests of all stakeholders and contribute to the overall stability and growth of the financial
+          ecosystem.</p>;
       case 'values':
-        return <p>We value integrity, excellence, and collaboration. We strive to uphold these values in everything we do.</p>;
+        return <p>CK Consultants specializes in guiding companies through insolvency and resolution processes
+          under the Insolvency & Bankruptcy Code, 2016. Our team of Interim Resolution Professionals
+          (IRPs) and Resolution Professionals (RPs) efficiently manages financial distress, protecting all
+          stakeholders' interests. With our expertise and industry experience, we offer customized
+          advisory, legal representation, and financial restructuring services. We support clients in
+          achieving the best possible outcomes throughout the insolvency journey.</p>;
       default:
         return <p>Click on a box to learn more about our vision, mission, and values.</p>;
     }
@@ -54,8 +64,8 @@ export const About = () => {
   return (
     <div>
       <div id='about' className='p-5 w-100' style={{ background: '#174035', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 5, textAlign: 'center' }}>
-        <h1 className='mt-5' style={{ fontSize: '50px', textAlign: 'center' }}>Making a positive impact</h1>
-        <p style={{ fontSize: '20px', width: '50%' }}>With a passion for technology and a commitment to excellence, we empower businesses to thrive in the digital landscape.</p>
+        <h1 className='mt-5' style={{ fontSize: '50px', textAlign: 'center' }}>Innovative CIRP solutions guaranteed.</h1>
+        <p style={{ fontSize: '20px', width: '50%' }}>CK Consultants: Leading in Insolvency & Bankruptcy solutions under the 2016 Code. Expert services ensure a seamless Corporate Insolvency Resolution Process (CIRP)</p>
         <ul className='mb-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 5, listStyle: 'none' }}>
           <li className="underline"><Link to='/' style={{ textDecoration: 'none', color: 'white' }}>Home</Link></li>
           <li>{'>'}</li>
@@ -169,12 +179,18 @@ export const About = () => {
       <section id='about-choose'>
         <div className='container' style={{ background: '#f6f6f4', marginTop: '80px', paddingBottom: '80px' }}>
           <div className='row pt-5'>
-            <div className='col-md-6 d-flex justify-content-center pt-5 ps-5' style={{ textAlign: 'left', flexDirection: 'column' }}>
+            <div className='col-md-6 d-flex justify-content-center ps-5' style={{ textAlign: 'left', flexDirection: 'column' }}>
               <p style={{ textAlign: 'left', color: '#f85c1d' }}>WHY CHOOSE US</p>
-              <h1 style={{ fontSize: '50px' }}>Reasons to choose our lending specialists</h1>
+              <h1 style={{ fontSize: '50px' }}>Reasons to choose us</h1>
             </div>
-            <div className='col-md-6 pt-5 ps-5 mt-5'>
-              <p style={{ textAlign: 'left', fontSize: '18px' }}>We care about your business and we're here if you need help finding a solution to match your business needs. Fast access to flexible funding solutions to support cash flow and business growth.</p>
+            <div className='col-md-6 pt-5 ps-5'>
+              <p style={{ textAlign: 'left', fontSize: '18px' }}>At CK Consultants, we combine in-depth knowledge of the Insolvency and Bankruptcy Code
+                with practical experience to provide our clients with tailored solutions. Our holistic approach,
+                extensive network, and commitment to excellence ensure that we deliver measurable results,
+                safeguarding the interests of all stakeholders involved.<br></br><br></br>
+                Choose CK Consultants for expert guidance, strategic insights, and comprehensive support
+                throughout your insolvency and bankruptcy processes.
+              </p>
             </div>
           </div>
 
@@ -182,12 +198,17 @@ export const About = () => {
             <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
               <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                  <div className='col-lg-3 col-md-12 col-12'>
+                  <div className='col-lg-12 col-md-12 col-12'>
                     <img src={icon1} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
                   </div>
-                  <div className='col-lg-8 col-md-12 col-12'>
-                    <h5>Speed</h5>
-                    <p>Swift approvals ensuring your business stays ahead in crucial decisions.</p>
+                  <div className='col-lg-12 col-md-12 col-12'>
+                    <h5>Expertise in Insolvency & Bankruptcy</h5>
+                    <p>CK Consultants specializes in navigating the
+                      complexities of the Insolvency & Bankruptcy Code, 2016. Our team comprises seasoned
+                      Interim Resolution Professionals (IRPs) and Resolution Professionals (RPs) with
+                      extensive experience in managing corporate insolvency proceedings, ensuring thorough
+                      and effective resolution strategies.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -196,12 +217,17 @@ export const About = () => {
             <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
               <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                  <div className='col-lg-3 col-md-12 col-12'>
+                  <div className='col-lg-12 col-md-12 col-12'>
                     <img src={icon2} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
                   </div>
-                  <div className='col-lg-8 col-md-12 col-12'>
-                    <h5>Flexibility</h5>
-                    <p>Tailored solutions adapting seamlessly to your evolving business.</p>
+                  <div className='col-lg-12 col-md-12 col-12'>
+                    <h5>Comprehensive Service Offerings</h5>
+                    <p>We provide a complete range of services tailored
+                      to meet the diverse needs of our clients under financial distress. From advisory and legal
+                      representation to financial restructuring and resolution planning, CK Consultants offers
+                      holistic solutions aimed at safeguarding stakeholders' interests and optimizing outcomes
+                      during insolvency processes.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -210,12 +236,16 @@ export const About = () => {
             <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
               <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
                 <div className='row m-2 gap-3' style={{ textAlign: 'left', background: 'white', padding: '30px' }}>
-                  <div className='col-lg-3 col-md-12 col-12'>
+                  <div className='col-lg-12 col-md-12 col-12'>
                     <img src={icon3} alt='speed-icon' style={{ background: '#f6f6f4', padding: '10px' }} />
                   </div>
-                  <div className='col-lg-8 col-md-12 col-12'>
-                    <h5>Confidence</h5>
-                    <p>Reliable support fostering trust, providing assurance for your aspirations.</p>
+                  <div className='col-lg-12 col-md-12 col-12'>
+                    <h5>Proven Track Record</h5>
+                    <p>With a demonstrated track record of successful case
+                      management and resolution, CK Consultants has earned a reputation for delivering
+                      results. Our proactive approach and commitment to client satisfaction underscore our
+                      ability to handle challenging insolvency cases with professionalism and diligence,
+                      achieving favorable resolutions for our clients.</p>
                   </div>
                 </div>
               </div>
@@ -223,6 +253,51 @@ export const About = () => {
           </div>
         </div>
       </section >
+
+
+      <section className='container'>
+        <div className='row mt-5 pt-4'>
+        <p style={{ color: '#f85c1d' }}>SERVICES</p>
+          <h1 className='mb-5' style={{ fontSize: '50px', textAlign: 'center' }}>
+            Our Key Services
+          </h1>
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
+              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: '#f6f6f4', padding: '30px' }}>
+                <div className='col-lg-12 col-md-12 col-12'>
+                  <h5 style={{fontWeight: 'bold'}}>Interim Resolution Professionals.</h5>
+                  <p>We act as Interim Resolution Professionals (IRPs) for initiating and implementing CIRP, offering our services to Financial Creditors, Operational Creditors, and other stakeholders. Our scope of work includes taking control of the debtor’s assets and affairs, and ensuring compliance with the Insolvency and Bankruptcy Code, 2016.</p>
+                  <a href='/service'><button className='button-underline' style={{ background: '#274d43', border: 'none', color: 'white', fontWeight: '500' }}><span>Read more</span></button></a>
+                </div>
+              </div>
+            </div>
+          </VisibilitySensor>
+
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
+              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: '#f6f6f4', padding: '30px' }}>
+                <div className='col-lg-12 col-md-12 col-12'>
+                  <h5 style={{fontWeight: 'bold'}}>Resolution Professional.</h5>
+                  <p>We serve as Resolution Professionals, guiding Financial Creditors, Operational Creditors, and Corporate Debtors through the CIRP. Our expertise ensures the development and execution of effective resolution plans to revive financially distressed entities.</p><br></br>
+                  <a href='/service'><button className='button-underline' style={{ background: '#274d43', border: 'none', color: 'white', fontWeight: '500' }}><span>Read more</span></button></a>
+                </div>
+              </div>
+            </div>
+          </VisibilitySensor>
+          <VisibilitySensor onChange={handleChange2} partialVisibility={100}>
+            <div className={`col-md-4 col-12 p-2 ${isVisible2 ? 'bottom-to-top' : ''}`}>
+              <div className='row m-2 gap-3' style={{ textAlign: 'left', background: '#f6f6f4', padding: '30px' }}>
+                <div className='col-lg-12 col-md-12 col-12'>
+                  <h5 style={{fontWeight: 'bold'}}>Representation on Committee of Creditors.</h5>
+                  <p>Our firm represents specific Financial Creditors or Classes of Creditors on the Committee of Creditors as per sections 21(6C) and 21(6A)(b) of the Insolvency and Bankruptcy Code, 2016, ensuring their interests are effectively communicated and safeguarded.</p>
+                  <a href='/service'><button className='button-underline' style={{ background: '#274d43', border: 'none', color: 'white', fontWeight: '500' }}><span>Read more</span></button></a>
+                </div>
+              </div>
+            </div>
+          </VisibilitySensor>
+        </div>
+      </section>
+
 
       <section id='nextstep'>
         <div className='container mt-5 mb-5'>
