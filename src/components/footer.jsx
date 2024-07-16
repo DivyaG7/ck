@@ -28,33 +28,25 @@ export const Footer = () => {
       <div style={{ borderBottom: '2px solid #f0f0f9' }}></div>
       <div className='container mt-5 mb-5'>
         <div className='row'>
-          <div className='col-md-8'>
+          <div className='col-md-6'>
             <div className='row'>
-              <div className='col-md-4' style={{ textAlign: 'left' }}>
-                <h5 className='mb-4' style={{ fontWeight: 'bold' }}>Features</h5>
-                <p>Page builder</p>
-                <p>Theme options</p>
-                <p>Theme builder</p>
-                <p>Template library</p>
+              <div className='col-md-6' style={{ textAlign: 'left' }}>
+                <h5 className='mb-4' style={{ fontWeight: 'bold' }}>Useful links</h5>
+                <a href='/' style={{textDecoration: 'none', color: 'black'}}><p>Home</p></a>
+                <a href='/about' style={{textDecoration: 'none', color: 'black'}}><p>About</p></a>
+                <a href='/service' style={{textDecoration: 'none', color: 'black'}}><p>Services</p></a>
+                <a href='/news' style={{textDecoration: 'none', color: 'black'}}><p>News</p></a>
+                <a href='/contact' style={{textDecoration: 'none', color: 'black'}}><p>Contact</p></a>
               </div>
-              <div className='col-md-4' style={{ textAlign: 'left' }}>
-                <h5 className='mb-4' style={{ fontWeight: 'bold' }}>Resources</h5>
-                <p>Support center</p>
-                <p>Documentation</p>
-                <p>Community</p>
-                <p>Hosting</p>
-              </div>
-              <div className='col-md-4' style={{ textAlign: 'left' }}>
+              <div className='col-md-6' style={{ textAlign: 'left' }}>
                 <h5 className='mb-4' style={{ fontWeight: 'bold' }}>Social</h5>
-                <p>Behance</p>
-                <p>Dribbble</p>
                 <p>Facebook</p>
                 <p>Instagram</p>
               </div>
             </div>
           </div>
-          <div className='col-md-4' style={{ textAlign: 'left' }}>
-            <h5>Business hours</h5>
+          <div className='col-md-6' style={{ textAlign: 'left' }}>
+            <h5 style={{ fontWeight: 'bold' }}>Business hours</h5>
             <div className='d-flex flex-md-row flex-column justify-content-between mt-4 gap-3'>
               {/* <div className='d-flex flex-column'>
                 <p className="mb-1">Monday - Friday</p>
@@ -72,7 +64,7 @@ export const Footer = () => {
             <div className='mb-2 mt-2' style={{ borderBottom: '2px solid #f0f0f9' }}></div>
             <div className='d-flex flex-md-row flex-column justify-content-between mt-2 gap-3'>
               <p className="mb-1">Saturday</p>
-              <p className="mb-1">09.00 AM - 2.00 PM</p>
+              <p className="mb-1">09.00 AM - 4.00 PM</p>
             </div>
             <div className='mb-2 mt-2' style={{ borderBottom: '2px solid #f0f0f9' }}></div>
             <div className='d-flex flex-md-row flex-column justify-content-between mt-2 gap-3'>

@@ -217,7 +217,7 @@ export const Contact = () => {
               </div>
               <div className='d-flex flex-column' style={{ alignItems: 'end' }}>
                 <p className="mb-1">09.00 AM - 6.00 PM</p>
-                <p className="mb-1">09.00 AM - 2.00 PM</p>
+                <p className="mb-1">09.00 AM - 4.00 PM</p>
                 <p className="mb-1">Closed</p>
               </div>
             </div>
