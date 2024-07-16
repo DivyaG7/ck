@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../components/news.css'
+import { ScrollToTop } from './scroll'
 
 export const News = () => {
   return (
@@ -118,6 +119,9 @@ export const News = () => {
           </div>
         </div>
       </section>
+
+      <ScrollToTop />
+
     </div>
   )
 }

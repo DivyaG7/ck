@@ -16,6 +16,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import { ScrollToTop } from './scroll';
 
 
 const ChangingWords = () => {
@@ -606,6 +607,8 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <ScrollToTop />
 
 
         </div>

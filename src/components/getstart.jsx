@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import '../components/getstart.css'
 import axios from 'axios';
+import { ScrollToTop } from './scroll';
 
 
 export const Getstart = () => {
@@ -260,6 +261,9 @@ export const Getstart = () => {
                     </div>
                 </div>
             </section>
+
+            <ScrollToTop />
+
         </div >
     )
 }

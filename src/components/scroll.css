@@ -1,0 +1,40 @@
+/* Scroll to Top Arrow Styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #004d40; /* Dark green background */
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top.visible {
+    display: block;
+    animation: bounce 2s infinite;
+}
+
+.scroll-to-top:hover {
+    background-color: #00392e; /* Darker green on hover */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

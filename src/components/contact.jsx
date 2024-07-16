@@ -7,6 +7,7 @@ import con_icon1 from '../assets/icon-6.svg'
 import con_icon2 from '../assets/icon-2.svg'
 import con_icon3 from '../assets/icon-3.svg'
 import VisibilitySensor from 'react-visibility-sensor';
+import { ScrollToTop } from './scroll';
 
 export const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -281,6 +282,11 @@ export const Contact = () => {
 
         </div>
       </section>
+
+
+      <ScrollToTop />
+
+
     </div>
   )
 }

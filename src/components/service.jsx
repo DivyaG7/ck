@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../components/service.css'
 import VisibilitySensor from 'react-visibility-sensor';
+import { ScrollToTop } from './scroll';
 
 export const Service = () => {
 
@@ -456,6 +457,10 @@ export const Service = () => {
           </div>
         </div>
       </section>
+
+      <ScrollToTop />
+
+
     </div>
   )
 }

@@ -11,6 +11,7 @@ import icon3 from '../assets/icon-9.svg'
 import VisibilitySensor from 'react-visibility-sensor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { ScrollToTop } from './scroll'
 
 export const About = () => {
 
@@ -316,6 +317,9 @@ export const About = () => {
           </div>
         </div>
       </section>
+
+
+      <ScrollToTop />
 
     </div >
   )
