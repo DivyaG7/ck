@@ -53,7 +53,7 @@ export const Service = () => {
     }
   };
 
-  const handleChange6 = (isVisible6)=> {
+  const handleChange6 = (isVisible6) => {
     if (isVisible6) {
       setIsVisible6(true);
     }
@@ -138,9 +138,13 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Interim Resolution Professionals</h5>
-                        <p>We provide services to Financial Creditors, Operational Creditors and other stakeholders to act as IRPs for initiating and implementing Corporate Insolvency Resolution Process ('CIRP') as specified under the Insolvency & Bankruptcy Code, 2016.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Interim Resolution Professionals.</h5>
+                        <p>We act as Interim Resolution Professionals (IRPs)
+                          for initiating and implementing CIRP, offering our services to Financial Creditors,
+                          Operational Creditors, and other stakeholders. Our scope of work includes taking control
+                          of the debtor’s assets and affairs, managing operations, and ensuring compliance with
+                          the Insolvency and Bankruptcy Code, 2016.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -157,9 +161,12 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Resolution Professional</h5>
-                        <p>We provide services to Financial Creditors, Operational Creditors and to the Corporate Debtors to act as a Resolution Professional under a Corporate Insolvency Resolution Process ('CIRP') as specified under the Insolvency & Bankruptcy Code, 2016.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Resolution Professional.</h5>
+                        <p>We serve as Resolution Professionals, guiding Financial
+                          Creditors, Operational Creditors, and Corporate Debtors through the CIRP. Our expertise
+                          ensures the development and execution of effective resolution plans to revive financially
+                          distressed entities.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -177,9 +184,12 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Representation on Commitee of Creditors</h5>
-                        <p>We provide services as mentioned under section 21 (6C) and section 21 (6A) (b) of the Insolvency & Bankruptcy Code, 2016 to represent specific Financial Creditor/ any Class of Creditors on the Committee of Creditors.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Representation on Committee of Creditors.</h5>
+                        <p>Our firm represents specific Financial
+                          Creditors or Classes of Creditors on the Committee of Creditors as per sections 21(6C)
+                          and 21(6A)(b) of the Insolvency and Bankruptcy Code, 2016, ensuring their interests are
+                          effectively communicated and safeguarded.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -197,9 +207,10 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Liquidator</h5>
-                        <p>We provide all services as a Liquidator as specified under the Insolvency & Bankruptcy Code, 2016 such as verification of claims of creditors, custody and control of the assets, preserve and protect assets of the company, carry out liquidation for the benefits of all stakeholders.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Liquidator Services.</h5>
+                        <p>Acting as Liquidators, we provide end-to-end services, including
+                          verification of creditors' claims, custody and control of assets, and executing liquidation
+                          processes to maximize returns for stakeholders.</p>
                       </div>
                     </div>
                   </div>
@@ -216,9 +227,10 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Corporate consulting for Resolution / Liquidation</h5>
-                        <p>We provide professional and strategic advice to all stakeholders in the IBC ecosystem for the best course of action to be adopted for the resolution process in case of default by the Corporate Debtor.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Corporate Consulting for Resolution / Liquidation.</h5>
+                        <p>We offer strategic advice to
+                          stakeholders within the IBC ecosystem, guiding them on the optimal courses of action for
+                          resolution processes, ensuring compliance and maximizing recovery.</p>
                       </div>
                     </div>
                   </div>
@@ -236,9 +248,10 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Preparation of RFRPs, Evaluation Matrix , Process Documents</h5>
-                        <p>We provide consultation to Corporates for Preparation of RFRPs, Evaluation Matrix , Process Documents.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Preparation of RFRPs, Evaluation Matrix, Process Documents.</h5>
+                        <p>Our team assists
+                          Corporates in preparing Request for Resolution Plans (RFRPs), Evaluation Matrices,
+                          and other essential process documents to streamline the resolution process.</p>
                       </div>
                     </div>
                   </div>
@@ -256,9 +269,11 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Identification of prospective resolution applicants, investors, lenders.</h5>
-                        <p>Given the vast Insolvency experience and associated business networks developed by our Senior IPs , we as a team have substantial access to potential investors and Special Situation Lenders who could be potential resolution applicant in any CIRP matters.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Identification of Prospective Resolution Applicants.</h5>
+                        <p>Leveraging our extensive
+                          business networks and experience, we identify potential investors, resolution applicants,
+                          and Special Situation Lenders for CIRP matters.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -276,9 +291,11 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Managing operations/cash flows of the entity under Insolvency.</h5>
-                        <p>Witworth has on its panel many industry experts from varied industry segments. These are senior and experienced professionals with working knowledge of each industry having personally worked in those segments. These Industry Specialists coupled with an experienced team of CAs, CSes, and finance and business professionals are available at all our branch locations enabling us to manage the ongoing operations, control cash flows and payments for maintaining an entity under CIRP as a going concern.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Managing Operations/Cash Flows.</h5>
+                        <p>With a panel of industry experts and a skilled team
+                          of finance professionals, we manage the operations and cash flows of entities under
+                          insolvency, ensuring their continuity as going concerns.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -296,9 +313,10 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>IBC Acquisition Strategy Advisory for resolution applicants for acquisition of assets / entities through the CIRP / Liquidation process</h5>
-                        <p>We advise clients who are looking to invest in distressed assets though the CIRP / Liquidation route. Their investment strategy as well as handholding them through the process is part of our Advisory business.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>IBC Acquisition Strategy Advisory.</h5>
+                        <p>We advise clients on acquiring distressed assets
+                          through CIRP and Liquidation processes, providing strategic insights and handholding
+                          through the entire acquisition journey.</p>
                       </div>
                     </div>
                   </div>
@@ -316,11 +334,10 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Preparation of resolution plans and representations of resolution applicant before RP, CoC , NCLT</h5>
-                        <p>Our team of experts will help the resolution applicant to prepare an appropriate Resolution Plan for the business entity under CIRP.
-                          <br></br>
-                          As per Section 5(26) of the IBC, "Resolution Plan" means a plan proposed by any person for Insolvency Resolution of the Corporate Debtor as a going concern. A resolution plan is prepared on the basis of the Information Memorandum given by the Resolution Professional.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Preparation of Resolution Plans.</h5>
+                        <p>Our experts assist resolution applicants in preparing
+                          comprehensive Resolution Plans, ensuring they meet all regulatory requirements and
+                          effectively address the needs of the Corporate Debtor.</p>
                       </div>
                     </div>
                   </div>
@@ -339,8 +356,10 @@ export const Service = () => {
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
                         <h5>Legal Advisory Service / Representation</h5>
-                        <p>We provide legal assistance to our clients through empanelled advocates for initiating the Insolvency Resolution process. We have established associations with reputed Legal firms to undertake cases with NCLT benches. All the needs of the client with regard to the following are taken care of .</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <p>Partnering with reputable legal firms, we
+                          provide extensive legal advisory services, including filing CIRP applications, pleadings,
+                          and representing stakeholders before NCLT, NCLAT, and the Supreme Court of India.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -359,8 +378,10 @@ export const Service = () => {
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
                         <h5>Interim Finance / Fund Syndications</h5>
-                        <p>The team is experienced in raising Interim Finance for companies under CIRP as well as implementing complex transactions involved in arranging fund syndication and for raising funds from investors, Special Situation Funds and NBFCs etc. for restructuring, takeover etc. of financially distressed entities. The team advises on navigating bankruptcies, acquisitions, debt restructurings, trading etc.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <p>Our team is adept at raising interim finance for
+                          companies under CIRP, arranging fund syndication, and navigating complex financial
+                          transactions for restructuring and takeovers.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -379,8 +400,8 @@ export const Service = () => {
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
                         <h5>NCLT/NCLAT Representations</h5>
-                        <p>To prepare any kind of application for and represent before NCLT and NCLAT.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <p>We prepare and represent applications before NCLT
+                          and NCLAT, ensuring our clients' interests are thoroughly advocated.</p>
                       </div>
                     </div>
                   </div>
@@ -398,9 +419,11 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Advisory to Corporate Debtor</h5>
-                        <p>Advisory to Corporate Debtor under financial stress as per RBI Circular dated June 7, 2019 and Sashakt Scheme.</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Advisory to Corporate Debtors</h5>
+                        <p>We offer advisory services to Corporate Debtors under
+                          financial stress, following RBI Circulars and the Sashakt Scheme, guiding them towards
+                          financial stability.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -418,9 +441,11 @@ export const Service = () => {
                     </div>
                     <div>
                       <div className='d-flex gap-2' style={{ flexDirection: 'column' }}>
-                        <h5>Advisory to Banks /FIs</h5>
-                        <p>Advise Banks/Financial Institutions in shortlisting matters for action under IBC Vs SARFAESI</p>
-                        <a href='/' style={{ textDecoration: 'none' }}><p>Scope of work of Interim Resolution Professionals</p></a>
+                        <h5>Advisory to Banks / FIs</h5>
+                        <p>We assist Banks and Financial Institutions in determining the
+                          best actions under IBC versus SARFAESI, ensuring optimal outcomes for their
+                          distressed assets.
+                        </p>
                       </div>
                     </div>
                   </div>
